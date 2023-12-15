@@ -1,34 +1,108 @@
-import React from 'react';
+import { Button, Link, Typography } from '@mui/material'
+import React from 'react'
+import clinica from '../assets/clinica.png'
+import calculator from '../assets/tip-calculator.png'
+import ppt from '../assets/ppt.png'
+import rating from '../assets/rating.png'
+import mesumo from '../assets/me-sumo.png'
+import proyecto from '../assets/proyecto-final.png'
+import {
+  LinkPortfolio,
+  PortfolioStyle,
+  ButtonStyle,
+  ProjectStyle,
+  ImagePortfolio,
+} from '../components/CustomMui'
 
 const projects = [
   {
     id: 1,
-    title: 'Proyecto 1',
-    description: 'Descripción del Proyecto 1.',
-    codeLink: 'Enlace al código del Proyecto 1',
-    deployLink: 'Enlace al deploy del Proyecto 1',
+    titulo: 'Me Sumo',
+    descripcion:
+      'Creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Arquitectura de microservicios: usuario, club y reservas.Infraestructura en AWS, utilizando EC2s para los microservicios,y S3s para desplegar el Front y para el repositorio de imágenes.En el Frontend se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions tras PRs aramas troncales supervisadas.',
+    linkWeb: 'http://me-sumo-frontend.s3-website-us-east-1.amazonaws.com/',
+    linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
+    img: mesumo,
+    alt: 'digital booking, alquiler de autos',
   },
-  // Agregar más proyectos según sea necesario
-];
+  {
+    id: 2,
+    titulo: 'Digital Booking',
+    descripcion:
+      'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metolodia de sprints (4) a lo largo de 2 meses con un grupo de trabajo mediante GitLab, yo estuve encargado del backend de la pagina creando la API del sitio y ayudando en lo que es base de datos y la infraestructura en AWS.',
+    img: proyecto,
+    alt: 'digital booking, alquiler de autos',
+  },
+  {
+    id: 3,
+    titulo: 'Clinica Dental',
+    descripcion:
+      'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
+    linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
+    img: clinica,
+    alt: 'clinica dental',
+  },
+  {
+    id: 4,
+    titulo: 'Tip Calculator',
+    descripcion:
+      'App funcional para calcular la propina a dar teniendo en cuenta el monto total, la cantidad de personas que pagan y el porcentaje que se desea dejar a modo de propina. Luego, mostrar el monto total y monto de la propina a pagar por persona.',
+    linkWeb: 'https://aquamantop.github.io/tip-calculator/',
+    linkCodigo: 'https://github.com/aquamantop/tip-calculator',
+    img: calculator,
+    alt: 'pagina para calcular propina',
+  },
+  {
+    id: 5,
+    titulo: 'Piedra, Papel o Tijera',
+    descripcion:
+      'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
+    linkWeb: 'https://aquamantop.github.io/Minijuego/',
+    linkCodigo: 'https://github.com/aquamantop/Minijuego',
+    img: ppt,
+    alt: 'pagina de piedra papel y tijera',
+  },
+  {
+    id: 6,
+    titulo: 'Interactive rating',
+    descripcion:
+      'Pagina simple con una tarjeta donde se puntua del 1 al 5, devolviendo otra tarjeta con la puntuacion y un agradecimiento.',
+    linkWeb: 'https://aquamantop.github.io/Interactive-rating-component/',
+    linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
+    img: rating,
+    alt: 'interactive-rating',
+  },
+]
 
 const Portfolio = () => {
   return (
-    <div>
-      <h1>Mi Portfolio</h1>
+    <div style={{ ...PortfolioStyle }}>
+      <Typography variant="h5">Mi Portfolio</Typography>
       {projects.map((project) => (
-        <div key={project.id}>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <p>
-            <strong>Código:</strong> <a href={project.codeLink}>{project.codeLink}</a>
-          </p>
-          <p>
-            <strong>Deploy:</strong> <a href={project.deployLink}>{project.deployLink}</a>
-          </p>
+        <div key={project.id} style={{ ...ProjectStyle }}>
+          <Typography variant="body1">{project.titulo}</Typography>
+          <img
+            src={project.img}
+            alt={project.alt}
+            style={{ ...ImagePortfolio }}
+          />
+          <Typography variant="body2">{project.descripcion}</Typography>
+
+          <Button sx={{ ...ButtonStyle }}>
+            <Link sx={{ ...LinkPortfolio }} href={project.linkCodigo}>
+              Repositorio
+            </Link>
+          </Button>
+
+          <Button sx={{ ...ButtonStyle }}>
+            <Link sx={{ ...LinkPortfolio }} href={project.linkWeb}>
+              Página web
+            </Link>
+          </Button>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio
