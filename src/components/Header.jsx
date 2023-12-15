@@ -1,6 +1,11 @@
 import React from 'react'
 import { AppBar, Typography, Avatar, Grid } from '@mui/material'
 import { AppBarSX } from './CustomMui'
+import {
+  dark,
+  complement,
+  warning,
+} from '../pages/styles/Color'
 
 const Header = (props) => {
   return (
@@ -13,10 +18,10 @@ const Header = (props) => {
         <Grid item>
           <Avatar
             sx={{
-              bgcolor: 'var(--warning)',
+              bgcolor: warning,
               width: 90,
               height: 90,
-              mr: 2,
+              mx: 2,
               my: 1,
             }}
             alt="Franco Rampazzo"
@@ -26,7 +31,7 @@ const Header = (props) => {
         <Grid item>
           <Typography
             sx={{
-              color: 'var(--black)',
+              color: dark,
             }}
             variant="h5"
           >
@@ -36,7 +41,7 @@ const Header = (props) => {
           <Typography
             sx={{
               alignContent: 'center',
-              color: 'var(--ligth-gray)',
+              color: complement,
             }}
             variant="subtitle1"
           >

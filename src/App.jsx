@@ -1,22 +1,25 @@
 import React from 'react'
-import './App.css'
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom'
+import './pages/styles/App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import NewTab from './components/NewTab'
 import '@fontsource/Lato'
+import {
+  dark,
+  background,
+  primary,
+  secondary,
+  secondaryLigth,
+  complement,
+  gray,
+  grayLight,
+  warning,
+} from './pages/styles/Color'
 
 const App = () => {
-  const dark = '#000'
-  const background = '#1e262e'
-  const primary = '#393E46'
-  const secondary = '#00ADB5'
-  const secondaryLigth = '#33c2cc'
-  const gray = '#EEEEEE'
-  const grayLight = '#f5f5f5'
-  const warning = '#ff7300'
   const theme = createTheme({
     palette: {
       mode: 'dark',
@@ -26,6 +29,9 @@ const App = () => {
       secondary: {
         main: secondary,
         light: secondaryLigth,
+      },
+      complement: {
+        main: complement
       },
       warning: {
         main: warning,
@@ -37,7 +43,7 @@ const App = () => {
       },
       text: {
         main: gray,
-        light: grayLight
+        light: grayLight,
       },
       typography: {
         fontFamily: ['Lato', 'sans-serif'],

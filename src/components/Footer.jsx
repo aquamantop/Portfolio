@@ -3,16 +3,18 @@ import { AppBar, Toolbar, Typography, IconButton, Link } from '@mui/material'
 import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import { LinkFooter } from "./CustomMui"
+import { AppBarSX } from './CustomMui'
+import {
+  dark,
+  grayLight,
+} from '../pages/styles/Color'
 
 const Footer = () => {
   return (
     <AppBar
-      sx={{
-        position: 'unset',
-        top: 'auto',
-        bottom: 0,
-        background: 'var(--secondary)',
-      }}
+    sx={{
+      ...AppBarSX,
+    }}
     >
       <Toolbar
         sx={{
@@ -24,13 +26,13 @@ const Footer = () => {
           target="_blank"
           href="https://drive.google.com/file/d/1J8RURLmzWD4ghNEHeZByauPh0_AB1WrI/view"
           sx={{
-            color: 'var(--black)',
+            color: dark,
             textDecoration: 'none',
             '&:visited': {
-              color: 'var(--black)',
+              color: dark,
             },
             '&:hover': {
-              color: 'var(--light-gray)',
+              color: grayLight,
             },
           }}
         >
