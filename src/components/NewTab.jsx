@@ -6,14 +6,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { styled } from '@mui/system'
 
 const StyledTabs = styled(Tabs)(() => ({
-  backgroundColor: 'var(--dark-background)',
+  backgroundColor: 'var(--background)',
 }))
 
 const StyledTab = styled(Tab)(() => ({
-  color: 'secondary',
+  color: 'var(--light-gray)',
   '&.Mui-selected': {
-    color: 'var(--dark-background-option)',
-    backgroundColor: 'var(--light-teal)',
+    color: 'var(--black)',
+    backgroundColor: 'var(--secondary-light)',
   },
 }))
 

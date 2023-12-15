@@ -11,7 +11,7 @@ const Footer = () => {
         position: 'unset',
         top: 'auto',
         bottom: 0,
-        background: 'var(--teal)',
+        background: 'var(--secondary)',
       }}
     >
       <Toolbar
@@ -24,10 +24,10 @@ const Footer = () => {
           target="_blank"
           href="https://drive.google.com/file/d/1J8RURLmzWD4ghNEHeZByauPh0_AB1WrI/view"
           sx={{
-            color: '#000',
+            color: 'var(--black)',
             textDecoration: 'none',
             '&:visited': {
-              color: '#000',
+              color: 'var(--black)',
             },
             '&:hover': {
               color: 'var(--light-gray)',
@@ -46,19 +46,7 @@ const Footer = () => {
             <IconButton>
               <GithubIcon
                 sx={{
-                  color: 'black',
-                  fontSize: 40,
-                  color: '#000',
-                  textDecoration: 'none',
-                  '&:visited': {
-                    color: '#000',
-                  },
-                  '&:hover': {
-                    color: 'var(--light-gray)',
-                  },
-                  '&:actived': {
-                    color: '#ffff',
-                  },
+                  ...LinkFooter,
                 }}
               />
             </IconButton>
@@ -72,7 +60,6 @@ const Footer = () => {
               <LinkedinIcon
                 sx={{
                   ...LinkFooter,
-                  fontSize: 45,
                 }}
               />
             </IconButton>

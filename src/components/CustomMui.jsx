@@ -1,28 +1,39 @@
+import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
+
+export const AppBarSX = {
+  position: 'unset',
+  top: 'auto',
+  bottom: 0,
+  backgroundColor: 'secondary.main',
+}
+
 export const LinkFooter = {
-  color: '#000',
+  fontSize: 40,
+  color: 'background.dark',
   textDecoration: 'none',
   '&:visited': {
-    color: '#000',
+    color: 'background.dark',
   },
   '&:hover': {
-    color: 'var(--light-gray)',
+    color: 'text.light',
   },
   '&:actived': {
-    color: '#ffff',
+    color: 'text.main',
   },
 }
 
 export const LinkPortfolio = {
-  color: 'var(--light-gray)',
+  color: 'text.light',
   textDecoration: 'none',
   '&:visited': {
-    color: 'var(--light-gray)',
+    color: 'text.ligh',
   },
   '&:hover': {
-    color: 'var(--light-teal)',
+    color: 'secondary.ligth',
   },
   '&:actived': {
-    color: '#000',
+    color: 'background.dark',
   },
 }
 
@@ -37,19 +48,54 @@ export const PortfolioStyle = {
 
 export const ProjectStyle = {
   marginBottom: '20px',
-  border: '1px solid var(--light-gray)',
+  border: '1px solid text.ligth',
   padding: '20px',
   width: '100%',
   boxSizing: 'border-box',
 }
 
-export const ButtonStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '10px',
-}
-
 export const ImagePortfolio = {
   width: '100%',
   marginBottom: '10px',
+}
+
+export const CustomButton = ({ buttonText, href }) => {
+  return (
+    <Button
+      variant="contained"
+      sx={{
+        height: '50px',
+        backgroundColor: 'background.paper',
+        borderColor: 'secondary.light',
+        borderWidth: '2px',
+        borderStyle: 'solid',
+        color: 'text.light',
+        '&:hover': {
+          backgroundColor: 'secondary.light',
+          color: 'background.dark',
+        },
+      }}
+      component={Link}
+      to={href}
+    >
+      {buttonText}
+    </Button>
+  )
+}
+
+export const ButtonStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  textAlign: 'center',
+  gap: '20px',
+  backgroundColor: 'background.paper',
+  borderColor: 'secondary.main',
+  fontWeight: 700,
+  borderWidth: '2px',
+  borderStyle: 'solid',
+  color: 'secondary.main',
+  '&:hover': {
+    backgroundColor: 'secondary.light',
+    color: 'background.dark',
+  },
 }

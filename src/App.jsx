@@ -9,9 +9,13 @@ import NewTab from './components/NewTab'
 import '@fontsource/Lato'
 
 const App = () => {
-  const background = '#222831'
+  const dark = '#000'
+  const background = '#1e262e'
   const primary = '#393E46'
   const secondary = '#00ADB5'
+  const secondaryLigth = '#33c2cc'
+  const gray = '#EEEEEE'
+  const grayLight = '#f5f5f5'
   const warning = '#ff7300'
   const theme = createTheme({
     palette: {
@@ -21,13 +25,19 @@ const App = () => {
       },
       secondary: {
         main: secondary,
+        light: secondaryLigth,
       },
       warning: {
         main: warning,
       },
       background: {
+        dark: dark,
         paper: background,
         default: background,
+      },
+      text: {
+        main: gray,
+        light: grayLight
       },
       typography: {
         fontFamily: ['Lato', 'sans-serif'],

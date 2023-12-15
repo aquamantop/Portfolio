@@ -1,34 +1,32 @@
-import React from "react";
-import { AppBar, Typography, Avatar, Grid } from "@mui/material";
+import React from 'react'
+import { AppBar, Typography, Avatar, Grid } from '@mui/material'
+import { AppBarSX } from './CustomMui'
 
 const Header = (props) => {
   return (
     <AppBar
       sx={{
-        position: "unset",
-        top: "auto",
-        bottom: 0,
-        background: "var(--teal)",
+        ...AppBarSX,
       }}
     >
-      <Grid container alignItems='center'>
+      <Grid container alignItems="center">
         <Grid item>
           <Avatar
             sx={{
-              bgcolor: "#ff7300",
+              bgcolor: 'var(--warning)',
               width: 90,
               height: 90,
               mr: 2,
               my: 1,
             }}
-            alt='Franco Rampazzo'
+            alt="Franco Rampazzo"
             src={props.image}
           />
         </Grid>
         <Grid item>
           <Typography
             sx={{
-              color: "#000000",
+              color: 'var(--black)',
             }}
             variant="h5"
           >
@@ -37,8 +35,8 @@ const Header = (props) => {
 
           <Typography
             sx={{
-              alignContent: "center",
-              color: "#ffffff",
+              alignContent: 'center',
+              color: 'var(--ligth-gray)',
             }}
             variant="subtitle1"
           >
@@ -47,7 +45,7 @@ const Header = (props) => {
         </Grid>
       </Grid>
     </AppBar>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

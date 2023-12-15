@@ -1,4 +1,4 @@
-import { Button, Link, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import React from 'react'
 import clinica from '../assets/clinica.png'
 import calculator from '../assets/tip-calculator.png'
@@ -7,11 +7,10 @@ import rating from '../assets/rating.png'
 import mesumo from '../assets/me-sumo.png'
 import proyecto from '../assets/proyecto-final.png'
 import {
-  LinkPortfolio,
   PortfolioStyle,
-  ButtonStyle,
   ProjectStyle,
   ImagePortfolio,
+  CustomButton,
 } from '../components/CustomMui'
 
 const projects = [
@@ -19,7 +18,7 @@ const projects = [
     id: 1,
     titulo: 'Me Sumo',
     descripcion:
-      'Creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Arquitectura de microservicios: usuario, club y reservas.Infraestructura en AWS, utilizando EC2s para los microservicios,y S3s para desplegar el Front y para el repositorio de imágenes.En el Frontend se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions tras PRs aramas troncales supervisadas.',
+      'En contexto del final de la especialización Backend Specialist se desarrolló una app de creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Arquitectura de microservicios: usuario, club y reservas.Infraestructura en AWS, utilizando EC2s para los microservicios,y S3s para desplegar el Front y para el repositorio de imágenes.En el Frontend se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions tras PRs aramas troncales supervisadas.',
     linkWeb: 'http://me-sumo-frontend.s3-website-us-east-1.amazonaws.com/',
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
     img: mesumo,
@@ -29,7 +28,7 @@ const projects = [
     id: 2,
     titulo: 'Digital Booking',
     descripcion:
-      'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metolodia de sprints (4) a lo largo de 2 meses con un grupo de trabajo mediante GitLab, yo estuve encargado del backend de la pagina creando la API del sitio y ayudando en lo que es base de datos y la infraestructura en AWS.',
+      'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     img: proyecto,
     alt: 'digital booking, alquiler de autos',
   },
@@ -77,28 +76,26 @@ const projects = [
 const Portfolio = () => {
   return (
     <div style={{ ...PortfolioStyle }}>
-      <Typography variant="h5">Mi Portfolio</Typography>
+      <Typography variant="h5" sx={{ color: 'var(--light-gray)' }}>
+        Mi Portfolio
+      </Typography>
       {projects.map((project) => (
         <div key={project.id} style={{ ...ProjectStyle }}>
-          <Typography variant="body1">{project.titulo}</Typography>
+          <Typography variant="body1" sx={{ color: 'var(--light-gray)' }}>
+            {project.titulo}
+          </Typography>
           <img
             src={project.img}
             alt={project.alt}
             style={{ ...ImagePortfolio }}
           />
-          <Typography variant="body2">{project.descripcion}</Typography>
+          <Typography variant="body2" sx={{ color: 'var(--light-gray)' }}>
+            {project.descripcion}
+          </Typography>
 
-          <Button sx={{ ...ButtonStyle }}>
-            <Link sx={{ ...LinkPortfolio }} href={project.linkCodigo}>
-              Repositorio
-            </Link>
-          </Button>
+          <CustomButton buttonText="Repositorio" href={project.linkCodigo} />
+          <CustomButton buttonText="Página web" href={project.linkWeb} />
 
-          <Button sx={{ ...ButtonStyle }}>
-            <Link sx={{ ...LinkPortfolio }} href={project.linkWeb}>
-              Página web
-            </Link>
-          </Button>
         </div>
       ))}
     </div>
