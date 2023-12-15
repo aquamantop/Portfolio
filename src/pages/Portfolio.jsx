@@ -82,18 +82,19 @@ const Portfolio = () => {
           <Typography variant="body1" sx={{ color: grayLight }}>
             {project.titulo}
           </Typography>
+
           <img
             src={project.img}
             alt={project.alt}
-            style={{ ...ImagePortfolio }}
-          />
+            style={{ ...ImagePortfolio }} />
+
           <Typography variant="body2" sx={{ color: grayLight }}>
             {project.descripcion}
           </Typography>
 
           <CustomButton buttonText="Repositorio" href={project.linkCodigo} />
-
           <CustomButton buttonText="Página web" href={project.linkWeb} />
+
         </div>
       ))}
     </div>

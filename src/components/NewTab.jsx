@@ -6,22 +6,23 @@ import { Link, useLocation } from 'react-router-dom'
 import { styled } from '@mui/system'
 import {
   dark,
-  background,
+  backgroundBTN,
   primary,
   complement,
   secondaryLigth,
   grayLight,
+  secondary,
 } from '../pages/styles/Color'
 
 const StyledTabs = styled(Tabs)(() => ({
-  backgroundColor: background,
+  backgroundColor: backgroundBTN,
 }))
 
 const StyledTab = styled(Tab)(() => ({
   color: grayLight,
   '&.Mui-selected': {
     color: complement,
-    backgroundColor: primary,
+    backgroundColor: secondary,
   },
   '&:hover': {
     color: dark,
@@ -45,7 +46,7 @@ export default function NavTab() {
         onChange={handleChange}
         centered
       >
-        <StyledTab omponent={Link} to="/" label="Inicio" value="/" />
+        <StyledTab component={Link} to="/" label="Inicio" value="/" />
         <StyledTab
           component={Link}
           to="/portfolio"

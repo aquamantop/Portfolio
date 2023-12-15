@@ -10,6 +10,7 @@ import '@fontsource/Lato'
 import {
   dark,
   background,
+  backgroundBTN,
   primary,
   secondary,
   secondaryLigth,
@@ -39,6 +40,7 @@ const App = () => {
       background: {
         dark: dark,
         paper: background,
+        button: backgroundBTN,
         default: background,
       },
       text: {

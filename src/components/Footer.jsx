@@ -26,14 +26,7 @@ const Footer = () => {
           target="_blank"
           href="https://drive.google.com/file/d/1J8RURLmzWD4ghNEHeZByauPh0_AB1WrI/view"
           sx={{
-            color: dark,
-            textDecoration: 'none',
-            '&:visited': {
-              color: dark,
-            },
-            '&:hover': {
-              color: grayLight,
-            },
+            ... LinkFooter,
           }}
         >
           <Typography>CV PDF</Typography>

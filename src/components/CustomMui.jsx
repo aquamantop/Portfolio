@@ -10,13 +10,13 @@ export const AppBarSX = {
 
 export const LinkFooter = {
   fontSize: 40,
-  color: 'background.dark',
+  color: 'complement.main',
   textDecoration: 'none',
   '&:visited': {
-    color: 'background.dark',
+    color: 'complement.main',
   },
   '&:hover': {
-    color: 'text.light',
+    color: 'background.dark',
   },
   '&:actived': {
     color: 'text.main',
@@ -52,6 +52,8 @@ export const ProjectStyle = {
   padding: '20px',
   width: '100%',
   boxSizing: 'border-box',
+  display: 'flex',         // Agregado para alinear proyectos en dos columnas
+  flexWrap: 'wrap',        // Agregado para permitir envolver proyectos a la siguiente fila
 }
 
 export const ImagePortfolio = {
@@ -63,20 +65,9 @@ export const CustomButton = ({ buttonText, href }) => {
   return (
     <Button
       variant="contained"
-      sx={{
-        height: '50px',
-        backgroundColor: 'background.paper',
-        borderColor: 'secondary.light',
-        borderWidth: '2px',
-        borderStyle: 'solid',
-        color: 'text.light',
-        '&:hover': {
-          backgroundColor: 'secondary.light',
-          color: 'background.dark',
-        },
-      }}
       component={Link}
       to={href}
+      sx={{...ButtonStyle}}
     >
       {buttonText}
     </Button>
@@ -85,10 +76,12 @@ export const CustomButton = ({ buttonText, href }) => {
 
 export const ButtonStyle = {
   display: 'flex',
+  height: '50px',
   justifyContent: 'center',
+  mr: '10px',
   textAlign: 'center',
   gap: '20px',
-  backgroundColor: 'background.paper',
+  backgroundColor: 'background.button',
   borderColor: 'secondary.main',
   fontWeight: 700,
   borderWidth: '2px',
