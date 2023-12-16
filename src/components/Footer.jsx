@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, IconButton, Link } from '@mui/material'
+import { AppBar, Toolbar, Typography, IconButton, Link, Box } from '@mui/material'
 import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import { LinkFooter } from "./CustomMui"
@@ -28,7 +28,7 @@ const Footer = () => {
           <Typography>CV PDF</Typography>
         </Link>
 
-        <div>
+        <Box>
           <Link
             target="_blank"
             href="https://github.com/aquamantop"
@@ -55,7 +55,7 @@ const Footer = () => {
               />
             </IconButton>
           </Link>
-        </div>
+        </Box>
       </Toolbar>
     </AppBar>
   )

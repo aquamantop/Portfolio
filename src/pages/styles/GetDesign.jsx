@@ -1,0 +1,101 @@
+import { useState } from 'react'
+import { createTheme } from '@mui/material/styles'
+import {
+  Lbackground,
+  LbackgroundBTN,
+  Lcomplement,
+  Lprimary,
+  Lsecondary,
+  Ltext,
+  Ltitles,
+  SDbackground,
+  SDbackgroundBTN,
+  SDcomplement,
+  SDprimary,
+  SDsecondary,
+  background,
+  backgroundBTN,
+  complement,
+  primary,
+  secondary,
+  titles,
+  text,
+  warning,
+} from './Color'
+
+export const useThemeToggle = () => {
+  const [currentTheme, setCurrentTheme] = useState('dark')
+
+  const setThemeMode = (mode) => {
+    setCurrentTheme(mode)
+  }
+
+  return { currentTheme, setThemeMode }
+}
+
+export const getThemeColors = (currentTheme) => {
+  switch (currentTheme) {
+    case 'light':
+      return {
+        background: Lbackground,
+        backgroundBTN: LbackgroundBTN,
+        primary: Lprimary,
+        secondary: Lsecondary,
+        complement: Lcomplement,
+        text: Ltext,
+        titles: Ltitles,
+        warning: warning,
+      }
+    case 'softDark':
+      return {
+        background: SDbackground,
+        backgroundBTN: SDbackgroundBTN,
+        primary: SDprimary,
+        secondary: SDsecondary,
+        complement: SDcomplement,
+        text: text,
+        titles: titles,
+        warning: warning,
+      }
+    case 'dark':
+      return {
+        background: background,
+        backgroundBTN: backgroundBTN,
+        primary: primary,
+        secondary: secondary,
+        complement: complement,
+        text: text,
+        titles: titles,
+        warning: warning,
+      }
+  }
+}
+
+export const createAppTheme = (themeColors) => {
+  return createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        main: themeColors.primary,
+      },
+      secondary: {
+        main: themeColors.secondary,
+      },
+      complement: {
+        main: themeColors.complement,
+      },
+      warning: {
+        main: themeColors.warning,
+      },
+      background: {
+        main: themeColors.background,
+        button: themeColors.backgroundBTN,
+        default: themeColors.background,
+      },
+      text: {
+        main: themeColors.text,
+        title: themeColors.titles,
+      },
+    },
+  })
+}

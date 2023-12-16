@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import clinica from '../assets/clinica.png'
 import calculator from '../assets/tip-calculator.png'
@@ -76,9 +76,9 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div style={{ ...PortfolioStyle }}>
+    <Box style={{ ...PortfolioStyle }}>
       {projects.map((project) => (
-        <div key={project.id} style={{ ...ProjectStyle }}>
+        <Box key={project.id} style={{ ...ProjectStyle }}>
           <Typography variant="body1" sx={{ color: text }}>
             {project.titulo}
           </Typography>
@@ -95,9 +95,9 @@ const Portfolio = () => {
 
           <CustomButton buttonText="Repositorio" href={project.linkCodigo} />
           <CustomButton buttonText="Página web" href={project.linkWeb} />
-        </div>
+        </Box>
       ))}
-    </div>
+    </Box>
   )
 }
 

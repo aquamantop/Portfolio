@@ -1,11 +1,40 @@
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 
+export const BackgroundSX = {
+  backgroundColor: 'background.main',
+}
+
+export const TitleSX = {
+  color: 'text.title',
+}
+
+export const SubtitleSX = {
+  alignContent: 'center',
+  color: 'complement.main',
+}
+
+export const AvatarSX = {
+  bgcolor: 'warning.main',
+  width: 90,
+  height: 90,
+  mx: 2,
+  my: 1,
+}
+
 export const AppBarSX = {
   position: 'unset',
   top: 'auto',
   bottom: 0,
   backgroundColor: 'primary.main',
+}
+
+export const LinkMode = {
+  fontSize: 40,
+  color: 'text.main',
+  '&:hover': {
+    color: 'text.title',
+  },
 }
 
 export const LinkFooter = {
@@ -72,10 +101,26 @@ export const CustomButton = ({ buttonText, href }) => {
       variant="contained"
       component={Link}
       to={href}
-      sx={{...ButtonStyle}}
-      target='_blank'
+      sx={{ ...ButtonStyle }}
+      target="_blank"
     >
       {buttonText}
     </Button>
   )
+}
+
+export const TabsStyleSX = {
+  backgroundColor: 'background.button',
+}
+
+export const TabSX = {
+  color: 'text.main',
+  '&.Mui-selected': {
+    color: 'complement.main',
+    backgroundColor: 'primary.main',
+  },
+  '&:hover': {
+    color: 'text.title',
+    backgroundColor: 'secondary.main',
+  },
 }
