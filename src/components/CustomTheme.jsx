@@ -2,7 +2,7 @@ import {
   useThemeToggle,
   getThemeColors,
   createAppTheme,
-} from '../pages/styles/GetDesign'
+} from '../pages/styles/GetTheme'
 import { ThemeProvider } from '@mui/material/styles'
 import { createContext } from 'react'
 

@@ -11,7 +11,6 @@ import {
 import { ColorModeContext } from '../components/CustomTheme.jsx'
 
 const getLayoutComponents = (mode) => {
-  console.log("mode", mode);
   switch (mode) {
     case 'dark':
       return { DivContainer, LayoutContainer }
@@ -32,8 +31,6 @@ const getLayoutComponents = (mode) => {
 
 const Layout = ({ children }) => {
   const { currentTheme } = useContext(ColorModeContext);
-
-  console.log("mode", currentTheme);
 
   const {
     DivContainer: SelectedDivContainer,

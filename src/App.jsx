@@ -14,7 +14,7 @@ import { Box } from '@mui/material'
 const App = () => {
   return (
     <BrowserRouter>
-      <Box sx={{...BackgroundSX}}>
+      <Box sx={{ ...BackgroundSX }}>
         <CustomTheme>
           <Layout>
             <NewTab></NewTab>
