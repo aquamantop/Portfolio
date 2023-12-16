@@ -1,25 +1,18 @@
-// Paleta rojo negro
+// Dark Mode
 export const background = '#03071E'
 export const backgroundBTN = '#6A040F'
 export const primary = '#9D0208'
 export const secondary = '#F48C06'
 export const complement = '#FFBA08'
 
-// Paleta pastel narana lila claro
-// export const background = '#6D6875'
+// Light Mode
+// export const background = '#f1f1f1'
 // export const backgroundBTN = '#B5838D'
 // export const primary = '#FFCDB2'
 // export const secondary = '#E5989B'
-// export const complement = '#bb4e33'
+// export const complement = '#9c351b'
 
-// Paleta pastel lila naranja
-// export const background = '#f1f1f1'
-// export const backgroundBTN = '#CE6A85'
-// export const primary = '#FAA275'
-// export const secondary = '#FF8C61'
-// export const complement = '#972f66'
-
-// Paleta azul verde
+// Soft Dark Mode
 // export const background = '#393E46'
 // export const backgroundBTN = '#195973'
 // export const primary = '#2E90A6'
