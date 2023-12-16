@@ -12,7 +12,7 @@ import {
   ImagePortfolio,
   CustomButton,
 } from '../components/CustomMui'
-import { grayLight } from './styles/Color'
+import { text } from './styles/Color'
 
 const projects = [
   {
@@ -79,22 +79,22 @@ const Portfolio = () => {
     <div style={{ ...PortfolioStyle }}>
       {projects.map((project) => (
         <div key={project.id} style={{ ...ProjectStyle }}>
-          <Typography variant="body1" sx={{ color: grayLight }}>
+          <Typography variant="body1" sx={{ color: text }}>
             {project.titulo}
           </Typography>
 
           <img
             src={project.img}
             alt={project.alt}
-            style={{ ...ImagePortfolio }} />
+            style={{ ...ImagePortfolio }}
+          />
 
-          <Typography variant="body2" sx={{ color: grayLight }}>
+          <Typography variant="body2" sx={{ color: text }}>
             {project.descripcion}
           </Typography>
 
           <CustomButton buttonText="Repositorio" href={project.linkCodigo} />
           <CustomButton buttonText="Página web" href={project.linkWeb} />
-
         </div>
       ))}
     </div>

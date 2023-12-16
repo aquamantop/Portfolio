@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, Typography, Avatar, Grid } from '@mui/material'
 import { AppBarSX } from './CustomMui'
 import {
-  dark,
+  titles,
   complement,
   warning,
 } from '../pages/styles/Color'
@@ -31,7 +31,7 @@ const Header = (props) => {
         <Grid item>
           <Typography
             sx={{
-              color: dark,
+              color: titles,
             }}
             variant="h5"
           >
@@ -45,7 +45,7 @@ const Header = (props) => {
             }}
             variant="subtitle1"
           >
-            Full-Stack Developer
+            Desarrollador Full-Stack Java || React || MySQL || AWS
           </Typography>
         </Grid>
       </Grid>

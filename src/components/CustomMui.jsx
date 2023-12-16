@@ -5,7 +5,7 @@ export const AppBarSX = {
   position: 'unset',
   top: 'auto',
   bottom: 0,
-  backgroundColor: 'secondary.main',
+  backgroundColor: 'primary.main',
 }
 
 export const LinkFooter = {
@@ -16,24 +16,10 @@ export const LinkFooter = {
     color: 'complement.main',
   },
   '&:hover': {
-    color: 'background.dark',
+    color: 'text.title',
   },
   '&:actived': {
     color: 'text.main',
-  },
-}
-
-export const LinkPortfolio = {
-  color: 'text.light',
-  textDecoration: 'none',
-  '&:visited': {
-    color: 'text.ligh',
-  },
-  '&:hover': {
-    color: 'secondary.ligth',
-  },
-  '&:actived': {
-    color: 'background.dark',
   },
 }
 
@@ -52,13 +38,32 @@ export const ProjectStyle = {
   padding: '20px',
   width: '100%',
   boxSizing: 'border-box',
-  display: 'flex',         // Agregado para alinear proyectos en dos columnas
-  flexWrap: 'wrap',        // Agregado para permitir envolver proyectos a la siguiente fila
+  display: 'flex',
+  flexWrap: 'wrap',
 }
 
 export const ImagePortfolio = {
   width: '100%',
   marginBottom: '10px',
+}
+
+export const ButtonStyle = {
+  display: 'flex',
+  height: '3rem',
+  justifyContent: 'center',
+  mr: '10px',
+  textAlign: 'center',
+  gap: '20px',
+  backgroundColor: 'background.button',
+  borderColor: 'complement.main',
+  fontWeight: 700,
+  borderWidth: '2px',
+  borderStyle: 'solid',
+  color: 'complement.main',
+  '&:hover': {
+    backgroundColor: 'secondary.main',
+    color: 'text.title',
+  },
 }
 
 export const CustomButton = ({ buttonText, href }) => {
@@ -68,27 +73,9 @@ export const CustomButton = ({ buttonText, href }) => {
       component={Link}
       to={href}
       sx={{...ButtonStyle}}
+      target='_blank'
     >
       {buttonText}
     </Button>
   )
-}
-
-export const ButtonStyle = {
-  display: 'flex',
-  height: '50px',
-  justifyContent: 'center',
-  mr: '10px',
-  textAlign: 'center',
-  gap: '20px',
-  backgroundColor: 'background.button',
-  borderColor: 'secondary.main',
-  fontWeight: 700,
-  borderWidth: '2px',
-  borderStyle: 'solid',
-  color: 'secondary.main',
-  '&:hover': {
-    backgroundColor: 'secondary.light',
-    color: 'background.dark',
-  },
 }

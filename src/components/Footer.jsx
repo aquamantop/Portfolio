@@ -4,10 +4,6 @@ import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
 import { LinkFooter } from "./CustomMui"
 import { AppBarSX } from './CustomMui'
-import {
-  dark,
-  grayLight,
-} from '../pages/styles/Color'
 
 const Footer = () => {
   return (

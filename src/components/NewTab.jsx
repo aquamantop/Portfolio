@@ -5,13 +5,12 @@ import Tab from '@mui/material/Tab'
 import { Link, useLocation } from 'react-router-dom'
 import { styled } from '@mui/system'
 import {
-  dark,
-  backgroundBTN,
+  text,
+  titles,
   primary,
-  complement,
-  secondaryLigth,
-  grayLight,
   secondary,
+  complement,
+  backgroundBTN,
 } from '../pages/styles/Color'
 
 const StyledTabs = styled(Tabs)(() => ({
@@ -19,14 +18,14 @@ const StyledTabs = styled(Tabs)(() => ({
 }))
 
 const StyledTab = styled(Tab)(() => ({
-  color: grayLight,
+  color: text,
   '&.Mui-selected': {
     color: complement,
-    backgroundColor: secondary,
+    backgroundColor: primary,
   },
   '&:hover': {
-    color: dark,
-    backgroundColor: secondaryLigth,
+    color: titles,
+    backgroundColor: secondary,
   },
 }))
 

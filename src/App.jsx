@@ -8,15 +8,13 @@ import Portfolio from './pages/Portfolio'
 import NewTab from './components/NewTab'
 import '@fontsource/Lato'
 import {
-  dark,
   background,
   backgroundBTN,
   primary,
   secondary,
-  secondaryLigth,
   complement,
-  gray,
-  grayLight,
+  text,
+  titles,
   warning,
 } from './pages/styles/Color'
 
@@ -29,23 +27,21 @@ const App = () => {
       },
       secondary: {
         main: secondary,
-        light: secondaryLigth,
       },
       complement: {
-        main: complement
+        main: complement,
       },
       warning: {
         main: warning,
       },
       background: {
-        dark: dark,
         paper: background,
         button: backgroundBTN,
         default: background,
       },
       text: {
-        main: gray,
-        light: grayLight,
+        main: text,
+        title: titles,
       },
       typography: {
         fontFamily: ['Lato', 'sans-serif'],
@@ -55,17 +51,19 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <Layout>
-          <div>
-            <NewTab></NewTab>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-            </Routes>
-          </div>
-        </Layout>
-      </ThemeProvider>
+      <div style={{ backgroundColor: background }}>
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <div>
+              <NewTab></NewTab>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+              </Routes>
+            </div>
+          </Layout>
+        </ThemeProvider>
+      </div>
     </BrowserRouter>
   )
 }
