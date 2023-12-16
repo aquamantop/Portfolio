@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import "./styles/layout.css"
+import { DivContainer, LayoutContainer} from "./styles/layout.js"
 import Image from "../assets/perfil.jpg"
 
 const Layout = ({ children }) => {
   return (
     <>
-    <div className="layout-container">
+    <LayoutContainer>
         <Header image={Image}/>
-        <div className="content-container">    
+        <DivContainer>    
             {children}
-        </div>    
+        </DivContainer>    
         <Footer />
-      </div>
+      </LayoutContainer>
     </>
   )
 }
