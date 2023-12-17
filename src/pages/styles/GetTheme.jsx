@@ -24,7 +24,7 @@ import {
 } from './Color'
 
 export const useThemeToggle = () => {
-  const [currentTheme, setCurrentTheme] = useState('dark')
+  const [currentTheme, setCurrentTheme] = useState('light')
 
   const setThemeMode = (mode) => {
     setCurrentTheme(mode)

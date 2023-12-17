@@ -8,7 +8,7 @@ import { createContext } from 'react'
 
 export const ColorModeContext = createContext({
   setThemeMode: () => {},
-  currentTheme: 'dark',
+  currentTheme: 'light',
 })
 
 export const CustomTheme = ({ children }) => {
