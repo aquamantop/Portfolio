@@ -1,10 +1,16 @@
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 
+/******************************** */
+/*  Cambiar color del background */
+/******************************* */
 export const BackgroundSX = {
-  backgroundColor: 'background.main',
+  backgroundColor: 'background',
 }
 
+/********************************************* */
+/*  Estilos para titulo y subtitulo del header */
+/********************************************* */
 export const TitleSX = {
   color: 'text.title',
 }
@@ -14,6 +20,10 @@ export const SubtitleSX = {
   color: 'complement.main',
 }
 
+
+/******************************* */
+/*  Estilos avatar en el header */
+/****************************** */
 export const AvatarSX = {
   bgcolor: 'warning.main',
   width: 90,
@@ -22,6 +32,10 @@ export const AvatarSX = {
   my: 1,
 }
 
+
+/************************************************** */
+/*  Estilos compartidos de barra de header y footer */
+/************************************************** */
 export const AppBarSX = {
   position: 'unset',
   top: 'auto',
@@ -29,6 +43,10 @@ export const AppBarSX = {
   backgroundColor: 'primary.main',
 }
 
+
+/**************************************** */
+/*  Estilos para iconos de cambio de tema */
+/**************************************** */
 export const LinkMode = {
   fontSize: 40,
   color: 'text.main',
@@ -37,6 +55,9 @@ export const LinkMode = {
   },
 }
 
+/**************************************** */
+/*  Estilos para link e iconos del footer */
+/**************************************** */
 export const LinkFooter = {
   fontSize: 40,
   color: 'complement.main',
@@ -52,6 +73,9 @@ export const LinkFooter = {
   },
 }
 
+/************************************************* */
+/*  Estilos y estructura para seccion de portflio  */
+/************************************************ */
 export const PortfolioStyle = {
   display: 'flex',
   flexDirection: 'column',
@@ -109,6 +133,9 @@ export const CustomButton = ({ buttonText, href }) => {
   )
 }
 
+/******************************************************** */
+/*  Estilos para Tabs (cambiar seccion inicio y portfolio */
+/******************************************************** */
 export const TabsStyleSX = {
   backgroundColor: 'background.button',
 }

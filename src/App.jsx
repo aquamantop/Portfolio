@@ -9,13 +9,14 @@ import NewTab from './components/NewTab'
 import '@fontsource/Lato'
 import { CustomTheme } from './components/CustomTheme'
 import { BackgroundSX } from './components/CustomMui'
-import { Box } from '@mui/material'
+import { Box, CssBaseline } from '@mui/material'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Box sx={{ ...BackgroundSX }}>
         <CustomTheme>
+          <CssBaseline />
           <Layout>
             <NewTab></NewTab>
             <Routes>

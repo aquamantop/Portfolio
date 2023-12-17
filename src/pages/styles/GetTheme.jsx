@@ -74,7 +74,7 @@ export const getThemeColors = (currentTheme) => {
 export const createAppTheme = (themeColors) => {
   return createTheme({
     palette: {
-      mode: 'dark',
+      mode: 'light',
       primary: {
         main: themeColors.primary,
       },
@@ -88,7 +88,7 @@ export const createAppTheme = (themeColors) => {
         main: themeColors.warning,
       },
       background: {
-        main: themeColors.background,
+        paper: themeColors.background,
         button: themeColors.backgroundBTN,
         default: themeColors.background,
       },
