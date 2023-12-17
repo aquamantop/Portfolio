@@ -9,12 +9,8 @@ export const BackgroundSX = {
 }
 
 /********************************************* */
-/*  Estilos para titulo y subtitulo del header */
+/*  Estilos para subtitulo del header */
 /********************************************* */
-export const TitleSX = {
-  color: 'text.title',
-}
-
 export const SubtitleSX = {
   alignContent: 'center',
   color: 'complement.main',
@@ -106,11 +102,11 @@ export const ButtonStyle = {
   height: '3rem',
   mr: '10px',
   textAlign: 'center',
+  color: 'complement.main',
   borderWidth: '2px',
   borderStyle: 'solid',
   borderColor: 'complement.main',
   backgroundColor: 'background.button',
-  color: 'complement.main',
   '&:hover': {
     backgroundColor: 'secondary.main',
     color: 'text.title',
@@ -121,10 +117,10 @@ export const ButtonContainer = {
   display: 'flex',
   justifyContent: 'center',
   gap: '20px',
-  marginTop: '2vh'
+  marginTop: '2vh',
 }
 
-export const CustomButton = ({ buttonText, href }) => {
+export const CustomButton = ({ buttonText, href, disabled }) => {
   return (
     <Button
       variant="contained"
@@ -132,6 +128,7 @@ export const CustomButton = ({ buttonText, href }) => {
       to={href}
       sx={{ ...ButtonStyle }}
       target="_blank"
+      disabled={disabled}
     >
       {buttonText}
     </Button>

@@ -1,9 +1,9 @@
 // Dark Mode
 export const background = '#03071E'
-export const backgroundBTN = '#6A040F'
-export const primary = '#9D0208'
-export const secondary = '#F48C06'
-export const complement = '#FFBA08'
+export const backgroundBTN = '#370617'
+export const primary = '#5c020b'
+export const secondary = '#D00000'
+export const complement = '#FAA307'
 
 // Light Mode
 export const Lbackground = '#f1f1f1'

@@ -6,12 +6,13 @@ import {
   Grid,
   Toolbar,
   IconButton,
+  Tooltip,
 } from '@mui/material'
 import LightMode from '@mui/icons-material/LightMode'
 import DarkMode from '@mui/icons-material/DarkMode'
 import SoftDarkMode from '@mui/icons-material/Brightness6'
-import { AppBarSX, LinkMode, AvatarSX, TitleSX, SubtitleSX } from './CustomMui'
-import { ColorModeContext } from '../components/CustomTheme'; 
+import { AppBarSX, LinkMode, AvatarSX, TextSX, SubtitleSX } from './CustomMui'
+import { ColorModeContext } from '../components/CustomTheme'
 
 const Header = (props) => {
   const { setThemeMode } = useContext(ColorModeContext)
@@ -31,7 +32,7 @@ const Header = (props) => {
         <Grid container alignItems="center">
           <Grid item>
             <Avatar
-              sx={{...AvatarSX}}
+              sx={{ ...AvatarSX }}
               alt="Franco Rampazzo"
               src={props.image}
             />
@@ -40,7 +41,7 @@ const Header = (props) => {
           <Grid item>
             <Typography
               sx={{
-                ...TitleSX
+                ...TextSX,
               }}
               variant="h5"
             >
@@ -48,27 +49,38 @@ const Header = (props) => {
             </Typography>
             <Typography
               sx={{
-                ...SubtitleSX
+                ...SubtitleSX,
               }}
               variant="subtitle1"
             >
-              Desarrollador Full-Stack 
+              Desarrollador Full-Stack
             </Typography>
           </Grid>
         </Grid>
 
-        <IconButton sx={{ ...LinkMode }} onClick={() => setThemeMode('light')}>
-          <LightMode />
-        </IconButton>
-        <IconButton
-          sx={{ ...LinkMode }}
-          onClick={() => setThemeMode('softDark')}
-        >
-          <SoftDarkMode />
-        </IconButton>
-        <IconButton sx={{ ...LinkMode }} onClick={() => setThemeMode('dark')}>
-          <DarkMode />
-        </IconButton>
+        <Tooltip title="Modo Claro" arrow>
+          <IconButton
+            sx={{ ...LinkMode }}
+            onClick={() => setThemeMode('light')}
+          >
+            <LightMode />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Modo Semi Oscuro" arrow>
+          <IconButton
+            sx={{ ...LinkMode }}
+            onClick={() => setThemeMode('softDark')}
+          >
+            <SoftDarkMode />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Modo Oscuro" arrow>
+          <IconButton sx={{ ...LinkMode }} onClick={() => setThemeMode('dark')}>
+            <DarkMode />
+          </IconButton>
+        </Tooltip>
       </Toolbar>
     </AppBar>
   )

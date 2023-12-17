@@ -12,7 +12,8 @@ import {
   ImagePortfolio,
   CustomButton,
   TextSX,
-  ButtonContainer
+  SubtitleSX,
+  ButtonContainer,
 } from '../components/CustomMui'
 
 const projects = [
@@ -31,6 +32,8 @@ const projects = [
     titulo: 'Digital Booking',
     descripcion:
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
+    linkWeb: null,
+    linkCodigo: null,
     img: proyecto,
     alt: 'digital booking, alquiler de autos',
   },
@@ -39,6 +42,7 @@ const projects = [
     titulo: 'Clinica Dental',
     descripcion:
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
+    linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
     img: clinica,
     alt: 'clinica dental',
@@ -80,8 +84,10 @@ const Portfolio = () => {
     <Box style={{ ...PortfolioStyle }}>
       {projects.map((p) => (
         <Box key={p.id} sx={{ ...ProjectStyle }}>
-          // TODO deshabitar botones para Digital Booking
-          <Typography variant="body1" sx={{ ...TextSX, textDecoration:'underline' }}>
+          <Typography
+            variant="h6"
+            sx={{ ...SubtitleSX, textDecoration: 'underline' }}
+          >
             {p.titulo}
           </Typography>
 
@@ -91,9 +97,17 @@ const Portfolio = () => {
             {p.descripcion}
           </Typography>
 
-          <Box sx={{ ...ButtonContainer}}>
-            <CustomButton buttonText="Repositorio" href={p.linkCodigo} />
-            <CustomButton buttonText="Página web" href={p.linkWeb} />
+          <Box sx={{ ...ButtonContainer }}>
+            <CustomButton
+              buttonText="Repositorio"
+              href={p.linkCodigo}
+              disabled={p.linkCodigo == null}
+            />
+            <CustomButton
+              buttonText="Página web"
+              href={p.linkWeb}
+              disabled={p.linkWeb == null}
+            />
           </Box>
         </Box>
       ))}
