@@ -12,6 +12,7 @@ import {
   ImagePortfolio,
   CustomButton,
   TextSX,
+  ButtonContainer
 } from '../components/CustomMui'
 
 const projects = [
@@ -79,22 +80,21 @@ const Portfolio = () => {
     <Box style={{ ...PortfolioStyle }}>
       {projects.map((p) => (
         <Box key={p.id} sx={{ ...ProjectStyle }}>
-          <Typography variant="body1" sx={{ ...TextSX }}>
+          // TODO deshabitar botones para Digital Booking
+          <Typography variant="body1" sx={{ ...TextSX, textDecoration:'underline' }}>
             {p.titulo}
           </Typography>
 
-          <img
-            src={p.img}
-            alt={p.alt}
-            style={{ ...ImagePortfolio }}
-          />
+          <img src={p.img} alt={p.alt} style={{ ...ImagePortfolio }} />
 
           <Typography variant="body2" sx={{ ...TextSX }}>
             {p.descripcion}
           </Typography>
 
-          <CustomButton buttonText="Repositorio" href={p.linkCodigo} />
-          <CustomButton buttonText="Página web" href={p.linkWeb} />
+          <Box sx={{ ...ButtonContainer}}>
+            <CustomButton buttonText="Repositorio" href={p.linkCodigo} />
+            <CustomButton buttonText="Página web" href={p.linkWeb} />
+          </Box>
         </Box>
       ))}
     </Box>

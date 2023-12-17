@@ -38,7 +38,6 @@ export const AvatarSX = {
   my: 1,
 }
 
-
 /************************************************** */
 /*  Estilos compartidos de barra de header y footer */
 /************************************************** */
@@ -48,7 +47,6 @@ export const AppBarSX = {
   bottom: 0,
   backgroundColor: 'primary.main',
 }
-
 
 /**************************************** */
 /*  Estilos para iconos de cambio de tema */
@@ -97,8 +95,6 @@ export const ProjectStyle = {
   padding: '20px',
   width: '100%',
   boxSizing: 'border-box',
-  display: 'flex',
-  flexWrap: 'wrap',
 }
 
 export const ImagePortfolio = {
@@ -107,22 +103,25 @@ export const ImagePortfolio = {
 }
 
 export const ButtonStyle = {
-  display: 'flex',
   height: '3rem',
-  justifyContent: 'center',
   mr: '10px',
   textAlign: 'center',
-  gap: '20px',
-  backgroundColor: 'background.button',
-  borderColor: 'complement.main',
-  fontWeight: 700,
   borderWidth: '2px',
   borderStyle: 'solid',
+  borderColor: 'complement.main',
+  backgroundColor: 'background.button',
   color: 'complement.main',
   '&:hover': {
     backgroundColor: 'secondary.main',
     color: 'text.title',
   },
+}
+
+export const ButtonContainer = {
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '20px',
+  marginTop: '2vh'
 }
 
 export const CustomButton = ({ buttonText, href }) => {
