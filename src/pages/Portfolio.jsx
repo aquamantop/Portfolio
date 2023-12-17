@@ -11,8 +11,8 @@ import {
   ProjectStyle,
   ImagePortfolio,
   CustomButton,
+  TextSX,
 } from '../components/CustomMui'
-import { text } from './styles/Color'
 
 const projects = [
   {
@@ -77,24 +77,24 @@ const projects = [
 const Portfolio = () => {
   return (
     <Box style={{ ...PortfolioStyle }}>
-      {projects.map((project) => (
-        <Box key={project.id} style={{ ...ProjectStyle }}>
-          <Typography variant="body1" sx={{ color: text }}>
-            {project.titulo}
+      {projects.map((p) => (
+        <Box key={p.id} sx={{ ...ProjectStyle }}>
+          <Typography variant="body1" sx={{ ...TextSX }}>
+            {p.titulo}
           </Typography>
 
           <img
-            src={project.img}
-            alt={project.alt}
+            src={p.img}
+            alt={p.alt}
             style={{ ...ImagePortfolio }}
           />
 
-          <Typography variant="body2" sx={{ color: text }}>
-            {project.descripcion}
+          <Typography variant="body2" sx={{ ...TextSX }}>
+            {p.descripcion}
           </Typography>
 
-          <CustomButton buttonText="Repositorio" href={project.linkCodigo} />
-          <CustomButton buttonText="Página web" href={project.linkWeb} />
+          <CustomButton buttonText="Repositorio" href={p.linkCodigo} />
+          <CustomButton buttonText="Página web" href={p.linkWeb} />
         </Box>
       ))}
     </Box>

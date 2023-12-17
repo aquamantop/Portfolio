@@ -20,6 +20,12 @@ export const SubtitleSX = {
   color: 'complement.main',
 }
 
+/******************* */
+/*  Color del texto */
+/****************** */
+export const TextSX = {
+  color: 'text.main',
+}
 
 /******************************* */
 /*  Estilos avatar en el header */
