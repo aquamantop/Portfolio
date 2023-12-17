@@ -52,7 +52,7 @@ const Header = (props) => {
               }}
               variant="subtitle1"
             >
-              Desarrollador Full-Stack Java || React || MySQL || AWS
+              Desarrollador Full-Stack 
             </Typography>
           </Grid>
         </Grid>
