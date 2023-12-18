@@ -32,9 +32,9 @@ export default function NavTab() {
         <Tab
           sx={{ ...TabSX }}
           component={Link}
-          to="/portfolio"
-          label="Portfolio"
-          value="/portfolio"
+          to="/proyectos"
+          label="Proyectos"
+          value="/proyectos"
         />
       </Tabs>
     </Box>

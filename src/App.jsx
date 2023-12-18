@@ -13,7 +13,7 @@ import { Box, CssBaseline } from '@mui/material'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio">
       <Box sx={{ ...BackgroundSX }}>
         <CustomTheme>
           <CssBaseline />
@@ -21,7 +21,7 @@ const App = () => {
             <NewTab></NewTab>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/proyectos" element={<Portfolio />} />
             </Routes>
           </Layout>
         </CustomTheme>
