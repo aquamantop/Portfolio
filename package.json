@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "http://aquamantop.github.io/Portfolio",
+  "homepage": "https://aquamantop.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
