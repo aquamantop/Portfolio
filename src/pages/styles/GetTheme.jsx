@@ -23,10 +23,22 @@ import {
   warning,
 } from './Color'
 
+const localStorageKey = 'theme'
+const defaultTheme = 'light'
+
+const getSavedTheme = () => {
+  return localStorage.getItem(localStorageKey) || defaultTheme
+}
+
+const saveTheme = (theme) => {
+  localStorage.setItem(localStorageKey, theme)
+}
+
 export const useThemeToggle = () => {
-  const [currentTheme, setCurrentTheme] = useState('light')
+  const [currentTheme, setCurrentTheme] = useState(getSavedTheme)
 
   const setThemeMode = (mode) => {
+    saveTheme(mode)
     setCurrentTheme(mode)
   }
 
