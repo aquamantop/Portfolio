@@ -94,6 +94,8 @@ export const PortfolioStyleMobile = {
 }
 
 export const ProjectStyle = {
+  display: 'grid',  
+  gridTemplateRows: 'auto auto 1fr auto', 
   marginBottom: '20px',
   border: '1px solid text.ligth',
   padding: '20px',
@@ -123,7 +125,6 @@ export const ButtonStyle = {
 }
 
 export const ButtonContainer = {
-  display: 'flex',
   justifyContent: 'center',
   gap: '20px',
   marginTop: '2vh',
