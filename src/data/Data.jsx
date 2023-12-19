@@ -14,7 +14,7 @@ export const ProyectsData = [
     id: 1,
     titulo: 'Me Sumo',
     descripcion:
-      'En contexto del final de la especialización Backend Specialist se desarrolló una app de creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Arquitectura de microservicios: usuario, club y reservas.Infraestructura en AWS, utilizando EC2s para los microservicios,y S3s para desplegar el Front y para el repositorio de imágenes.En el Frontend se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions tras PRs aramas troncales supervisadas.',
+      'En contexto del final de la especialización Backend Specialist se desarrolló una app de creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Estructura de microservicios en el Back. Infraestructura en AWS, utilizando EC2s para los microservicios, y S3s para desplegar el Front y para el repositorio de imágenes. En el Front se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions.',
     linkWeb: 'http://me-sumo-frontend.s3-website-us-east-1.amazonaws.com/',
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
     img: mesumo,

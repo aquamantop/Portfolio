@@ -11,7 +11,7 @@ import {
 import LightMode from '@mui/icons-material/LightMode'
 import DarkMode from '@mui/icons-material/DarkMode'
 import SoftDarkMode from '@mui/icons-material/Brightness6'
-import { AppBarSX, LinkMode, AvatarSX, TextSX, SubtitleSX } from './CustomMui'
+import { AppBarSX, LinkMode, AvatarSX, TextSX, SubtitleSX } from '../pages/styles/CustomMui'
 import { ColorModeContext } from '../components/CustomTheme'
 
 const Header = (props) => {

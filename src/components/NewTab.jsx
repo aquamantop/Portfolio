@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import { Link, useLocation } from 'react-router-dom'
-import { TabsStyleSX, TabSX } from './CustomMui'
+import { TabsStyleSX, TabSX } from '../pages/styles/CustomMui'
 
 export default function NavTab() {
   const location = useLocation()

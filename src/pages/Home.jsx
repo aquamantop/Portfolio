@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-  Box,
-  Typography,
-  Grid,
-  List,
-} from '@mui/material'
-import { TextSX } from '../components/CustomMui'
+import { Box, Typography, Grid, List } from '@mui/material'
+import { TextSX } from './styles/CustomMui'
 import AddEducation from '../components/AddEducation'
 import AddTechnologies from '../components/AddTechnologies'
 

@@ -9,7 +9,7 @@ import {
   TextSX,
   SubtitleSX,
   ButtonContainer,
-} from '../components/CustomMui'
+} from './styles/CustomMui'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { ProyectsData } from '../data/Data'
 

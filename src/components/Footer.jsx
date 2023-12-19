@@ -2,8 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, IconButton, Link, Box } from '@mui/material'
 import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
-import { LinkFooter } from "./CustomMui"
-import { AppBarSX } from './CustomMui'
+import { LinkFooter, AppBarSX } from "../pages/styles/CustomMui"
 
 const Footer = () => {
   return (

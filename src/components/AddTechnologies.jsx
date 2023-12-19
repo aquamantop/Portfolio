@@ -1,7 +1,7 @@
 import React from 'react'
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
 import { TechData } from '../data/Data'
-import { TextSX } from './CustomMui'
+import { TextSX } from '../pages/styles/CustomMui'
 
 const AddTechnologies = () => {
   return TechData.map((tech, index) => (
