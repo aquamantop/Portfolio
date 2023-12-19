@@ -4,16 +4,10 @@ import {
   Typography,
   Grid,
   List,
-  ListItemText,
-  ListItemIcon,
-  ListItem,
-  Divider,
 } from '@mui/material'
 import { TextSX } from '../components/CustomMui'
-import { GrServerCluster } from 'react-icons/gr'
-import { BsServer } from 'react-icons/bs'
-import { BiSolidDevices } from 'react-icons/bi'
-import { MdCloudDone } from 'react-icons/md'
+import AddEducation from '../components/AddEducation'
+import AddTechnologies from '../components/AddTechnologies'
 
 const Home = () => {
   return (
@@ -37,71 +31,7 @@ const Home = () => {
             Formación Académica
           </Typography>
           <List>
-            <ListItem
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>CERTIFIED TECH DEVELOPER</ListItemText>
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>
-                Digital House | May 2021 - December 2022
-              </ListItemText>
-              <ListItemText
-                sx={{
-                  textAlign: 'center',
-                }}
-              >
-                Beca otorgada por Digital House, Mercado Libre y Globant, quien
-                en conjunto desarrollaron el programa de la carrera.
-              </ListItemText>
-            </ListItem>
-            <Divider />
-            <ListItem
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>BACKEND SPECIALIST</ListItemText>
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>
-                Digital House | Febrero 2023 - Diciembre 2023
-              </ListItemText>
-              <ListItemText
-                sx={{
-                  textAlign: 'center',
-                }}
-              >
-                Continuación del Certified Tech Developer, especializándome en
-                el área del backend, aprendiendo desde el desarrollo de
-                microservicios con Java (Spring Boot y Spring Cloud) y con Go
-                (Gin), la seguridad con IAM (Keycloak)
-              </ListItemText>
-            </ListItem>
-            <Divider />
-            <ListItem
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>LIC. EN PSICOLOGÍA</ListItemText>
-              <ListItemText sx={{
-                  textAlign: 'center',
-                }}>
-                Universidad de Buenos Aires | 2016 - act.
-              </ListItemText>
-            </ListItem>
+            <AddEducation />
           </List>
         </Grid>
 
@@ -109,44 +39,7 @@ const Home = () => {
           <Typography variant="h5" my={2} mb={3}>
             Tecnologías y Herramientas
           </Typography>
-          <List>
-            <ListItemIcon sx={{ ...TextSX }}>
-              <GrServerCluster />
-              <ListItemText sx={{ ml: 1 }} /> Backend:
-            </ListItemIcon>
-            <ListItemText /> Java
-            <ListItemText /> Spring Boot
-            <ListItemText /> Go
-          </List>
-
-          <List>
-            <ListItemIcon sx={{ ...TextSX }}>
-              <BiSolidDevices />
-              <ListItemText sx={{ ml: 1 }} /> Frontend:
-            </ListItemIcon>
-            <ListItemText /> HTML/CSS
-            <ListItemText /> JavaScript
-            <ListItemText /> React
-          </List>
-
-          <List>
-            <ListItemIcon sx={{ ...TextSX }}>
-              <MdCloudDone />
-              <ListItemText sx={{ ml: 1 }} /> Infraestructura:
-            </ListItemIcon>
-            <ListItemText /> AWS
-            <ListItemText /> Docker
-            <ListItemText /> Github Actions
-          </List>
-
-          <List>
-            <ListItemIcon sx={{ ...TextSX }}>
-              <BsServer />
-              <ListItemText sx={{ ml: 1 }} /> Base de datos:
-            </ListItemIcon>
-            <ListItemText /> MySQL
-            <ListItemText /> MongoDB
-          </List>
+          <AddTechnologies />
         </Grid>
       </Grid>
     </Box>

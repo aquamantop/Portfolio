@@ -11,20 +11,20 @@ import {
   ButtonContainer,
 } from '../components/CustomMui'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import Data from '../components/Data'
+import { ProyectsData } from '../data/Data'
 
-const projects = Data
+const projects = ProyectsData
 
 const Portfolio = () => {
   const isMobile = useMediaQuery('(max-width:768px)')
 
   return (
-    <Box sx={ isMobile ? {...PortfolioStyleMobile} : {...PortfolioStyle} }>
+    <Box sx={isMobile ? { ...PortfolioStyleMobile } : { ...PortfolioStyle }}>
       {projects.map((p) => (
         <Box
           key={p.id}
           sx={{
-            ...ProjectStyle
+            ...ProjectStyle,
           }}
         >
           <Typography
