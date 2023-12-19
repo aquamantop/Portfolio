@@ -10,10 +10,11 @@ import '@fontsource/Lato'
 import { CustomTheme } from './components/CustomTheme'
 import { BackgroundSX } from './components/CustomMui'
 import { Box, CssBaseline } from '@mui/material'
+import { HashRouter as Router } from 'react-router-dom';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <Router>
       <Box sx={{ ...BackgroundSX }}>
         <CustomTheme>
           <CssBaseline />
@@ -26,7 +27,7 @@ const App = () => {
           </Layout>
         </CustomTheme>
       </Box>
-    </BrowserRouter>
+    </Router>
   )
 }
 

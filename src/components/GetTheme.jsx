@@ -21,7 +21,7 @@ import {
   titles,
   text,
   warning,
-} from './Color'
+} from '../pages/styles/Color'
 
 const localStorageKey = 'theme'
 const defaultTheme = 'light'

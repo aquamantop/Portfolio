@@ -1,14 +1,10 @@
-import {
-  useThemeToggle,
-  getThemeColors,
-  createAppTheme,
-} from '../pages/styles/GetTheme'
+import { useThemeToggle, getThemeColors, createAppTheme } from './GetTheme'
 import { ThemeProvider } from '@mui/material/styles'
 import { createContext } from 'react'
 
 export const ColorModeContext = createContext({
   setThemeMode: () => {},
-  currentTheme: 'light',
+  currentTheme: '',
 })
 
 export const CustomTheme = ({ children }) => {

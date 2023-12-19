@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 import { Header } from '../components/Header'
 import Footer from '../components/Footer'
 import Image from '../assets/perfil.jpg'
-import { DivContainer, LayoutContainer } from './styles/layoutDark.js'
-import { DivContainerSD, LayoutContainerSD } from './styles/layoutSofDark.js'
+import { DivContainer, LayoutContainer } from './styles/layoutDark'
+import { DivContainerSD, LayoutContainerSD } from './styles/layoutSofDark'
 import {
   DivContainerLight,
   LayoutContainerLight,
-} from './styles/layoutLight.js'
-import { ColorModeContext } from '../components/CustomTheme.jsx'
+} from './styles/layoutLight'
+import { ColorModeContext } from '../components/CustomTheme'
 
 const getLayoutComponents = (mode) => {
   switch (mode) {

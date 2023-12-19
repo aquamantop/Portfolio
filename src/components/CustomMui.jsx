@@ -77,11 +77,19 @@ export const LinkFooter = {
 /*  Estilos y estructura para seccion de portflio  */
 /************************************************ */
 export const PortfolioStyle = {
-  display: 'flex',
-  flexDirection: 'column',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
   alignItems: 'center',
   textAlign: 'center',
-  maxWidth: '70vw',
+  maxWidth: '100vw',
+  margin: '0 auto',
+}
+export const PortfolioStyleMobile = {
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  alignItems: 'center',
+  textAlign: 'center',
+  maxWidth: '100vw',
   margin: '0 auto',
 }
 
@@ -90,6 +98,7 @@ export const ProjectStyle = {
   border: '1px solid text.ligth',
   padding: '20px',
   width: '100%',
+  height: '100%',
   boxSizing: 'border-box',
 }
 
