@@ -7,6 +7,7 @@ import {
   ListItemText,
   ListItemIcon,
   ListItem,
+  Divider,
 } from '@mui/material'
 import { TextSX } from '../components/CustomMui'
 import { GrServerCluster } from 'react-icons/gr'
@@ -42,8 +43,12 @@ const Home = () => {
                 flexDirection: 'column',
               }}
             >
-              <ListItemText>CERTIFIED TECH DEVELOPER</ListItemText>
-              <ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>CERTIFIED TECH DEVELOPER</ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>
                 Digital House | May 2021 - December 2022
               </ListItemText>
               <ListItemText
@@ -55,14 +60,19 @@ const Home = () => {
                 en conjunto desarrollaron el programa de la carrera.
               </ListItemText>
             </ListItem>
+            <Divider />
             <ListItem
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
               }}
             >
-              <ListItemText>BACKEND SPECIALIST</ListItemText>
-              <ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>BACKEND SPECIALIST</ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>
                 Digital House | Febrero 2023 - Diciembre 2023
               </ListItemText>
               <ListItemText
@@ -76,14 +86,19 @@ const Home = () => {
                 (Gin), la seguridad con IAM (Keycloak)
               </ListItemText>
             </ListItem>
+            <Divider />
             <ListItem
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
               }}
             >
-              <ListItemText>LIC. EN PSICOLOGÍA</ListItemText>
-              <ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>LIC. EN PSICOLOGÍA</ListItemText>
+              <ListItemText sx={{
+                  textAlign: 'center',
+                }}>
                 Universidad de Buenos Aires | 2016 - act.
               </ListItemText>
             </ListItem>
