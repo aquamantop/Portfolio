@@ -8,7 +8,7 @@ import Portfolio from './pages/Portfolio'
 import NewTab from './components/NewTab'
 import '@fontsource/Lato'
 import { CustomTheme } from './components/CustomTheme'
-import { BackgroundSX } from './components/CustomMui'
+import { BackgroundSX } from './pages/styles/CustomMui'
 import { Box, CssBaseline } from '@mui/material'
 import { HashRouter as Router } from 'react-router-dom';
 
