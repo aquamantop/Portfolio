@@ -2,7 +2,16 @@ import clinica from '../assets/clinica.png'
 import calculator from '../assets/tip-calculator.png'
 import ppt from '../assets/ppt.png'
 import rating from '../assets/rating.png'
-import mesumo from '../assets/me-sumo.png'
+import Clubs from '../assets/me-sumo/Clubes.png'
+import CreateEventProfile from '../assets/me-sumo/Crear-evento-perfil.png'
+import CreateEvent from '../assets/me-sumo/Crear-evento.png'
+import Home from '../assets/me-sumo/Home.png'
+import Login from '../assets/me-sumo/Login.png'
+import Menu from '../assets/me-sumo/Menu.png'
+import Profile from '../assets/me-sumo/Perfil.png'
+import Register from '../assets/me-sumo/Registrar.png'
+import JoinEvent from '../assets/me-sumo/Sumarse-evento.png'
+import ViewClub from '../assets/me-sumo/Vista-club.png'
 import proyecto from '../assets/proyecto-final.png'
 import { GrServerCluster } from 'react-icons/gr';
 import { BiSolidDevices } from 'react-icons/bi';
@@ -15,10 +24,12 @@ export const ProyectsData = [
     titulo: 'Me Sumo',
     descripcion:
       'En contexto del final de la especialización Backend Specialist se desarrolló una app de creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Estructura de microservicios en el Back. Infraestructura en AWS, utilizando EC2s para los microservicios, y S3s para desplegar el Front y para el repositorio de imágenes. En el Front se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions.',
-    linkWeb: 'http://me-sumo-frontend.s3-website-us-east-1.amazonaws.com/',
+    linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
-    img: mesumo,
-    alt: 'digital booking, alquiler de autos',
+    img: [Home],
+    // img: [Home, Login, Register, Menu, Profile, JoinEvent, Clubs, ViewClub, CreateEventProfile, CreateEvent],
+    // alt: ['Home', 'Login', 'Register', 'Menu', 'Profile', 'JoinEvent', 'Clubs', 'ViewClub', 'CreateEventProfile', 'CreateEvent'],
+    alt: ['Home'],
   },
   {
     id: 2,
@@ -27,7 +38,7 @@ export const ProyectsData = [
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     linkWeb: null,
     linkCodigo: null,
-    img: proyecto,
+    img: [proyecto],
     alt: 'digital booking, alquiler de autos',
   },
   {
@@ -37,7 +48,7 @@ export const ProyectsData = [
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
-    img: clinica,
+    img: [clinica],
     alt: 'clinica dental',
   },
   {
@@ -47,7 +58,7 @@ export const ProyectsData = [
       'App funcional para calcular la propina a dar teniendo en cuenta el monto total, la cantidad de personas que pagan y el porcentaje que se desea dejar a modo de propina. Luego, mostrar el monto total y monto de la propina a pagar por persona.',
     linkWeb: 'https://aquamantop.github.io/tip-calculator/',
     linkCodigo: 'https://github.com/aquamantop/tip-calculator',
-    img: calculator,
+    img: [calculator],
     alt: 'pagina para calcular propina',
   },
   {
@@ -57,7 +68,7 @@ export const ProyectsData = [
       'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
     linkWeb: 'https://aquamantop.github.io/Minijuego/',
     linkCodigo: 'https://github.com/aquamantop/Minijuego',
-    img: ppt,
+    img: [ppt],
     alt: 'pagina de piedra papel y tijera',
   },
   {
@@ -67,7 +78,7 @@ export const ProyectsData = [
       'Pagina simple con una tarjeta donde se puntua del 1 al 5, devolviendo otra tarjeta con la puntuacion y un agradecimiento.',
     linkWeb: 'https://aquamantop.github.io/Interactive-rating-component/',
     linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
-    img: rating,
+    img: [rating],
     alt: 'interactive-rating',
   },
 ]

@@ -12,6 +12,7 @@ import {
 } from './styles/CustomMui'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { ProyectsData } from '../data/Data'
+// import CarouselImg from '../components/Carousel'
 
 const projects = ProyectsData
 
@@ -34,7 +35,11 @@ const Portfolio = () => {
             {p.titulo}
           </Typography>
 
-          <img src={p.img} alt={p.alt} style={{ ...ImagePortfolio }} />
+          {/* {p.img.length > 1 ? (
+            <CarouselImg images={p.img} alts={p.alt} />
+          ) : ( */}
+            <img src={p.img[0]} alt={p.alt} style={{ ...ImagePortfolio }} />
+          {/* )} */}
 
           <Typography variant="body2" sx={{ ...TextSX }}>
             {p.descripcion}
