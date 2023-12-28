@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Header } from '../components/Header'
 import Footer from '../components/Footer'
-import Image from '../assets/perfil.jpg'
+import Image from '../assets/perfil.webp'
 import { DivContainer, LayoutContainer } from './styles/LayoutDark'
 import { DivContainerSD, LayoutContainerSD } from './styles/LayoutSofDark'
 import {
