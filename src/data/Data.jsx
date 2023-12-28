@@ -13,10 +13,10 @@ import Register from '../assets/me-sumo/registrar.webp'
 import JoinEvent from '../assets/me-sumo/sumarse-evento.webp'
 import ViewClub from '../assets/me-sumo/vista-club.webp'
 import proyecto from '../assets/proyecto-final.webp'
-import { GrServerCluster } from 'react-icons/gr';
-import { BiSolidDevices } from 'react-icons/bi';
-import { MdCloudDone } from 'react-icons/md';
-import { BsServer } from 'react-icons/bs';
+import { GrServerCluster } from 'react-icons/gr'
+import { BiSolidDevices } from 'react-icons/bi'
+import { MdCloudDone } from 'react-icons/md'
+import { BsServer } from 'react-icons/bs'
 
 export const ProyectsData = [
   {
@@ -26,10 +26,48 @@ export const ProyectsData = [
       'En contexto del final de la especialización Backend Specialist se desarrolló una app de creación de eventos deportivos en clubes que ofrecen turnos asociados a canchas y que finalizan como reservas al completarse el cupo. Estructura de microservicios en el Back. Infraestructura en AWS, utilizando EC2s para los microservicios, y S3s para desplegar el Front y para el repositorio de imágenes. En el Front se utilizó React.js con Vite y MUI. Los despliegues automatizados se programaron con GitHub Actions.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
-    img: [Home],
-    // img: [Home, Login, Register, Menu, Profile, JoinEvent, Clubs, ViewClub, CreateEventProfile, CreateEvent],
-    // alt: ['Home', 'Login', 'Register', 'Menu', 'Profile', 'JoinEvent', 'Clubs', 'ViewClub', 'CreateEventProfile', 'CreateEvent'],
-    alt: ['Home'],
+    images: [
+      {
+        img: Home,
+        alt: 'Me sumo - Pagina principal',
+      },
+      {
+        img: Login,
+        alt: 'Me sumo - Iniciar Sesion',
+      },
+      {
+        img: Register,
+        alt: 'Me sumo - Registrarse',
+      },
+      {
+        img: Menu,
+        alt: 'Me sumo - Menu',
+      },
+      {
+        img: Profile,
+        alt: 'Me sumo - Perfil',
+      },
+      {
+        img: JoinEvent,
+        alt: 'Me sumo - Sumarse a un evento',
+      },
+      {
+        img: Clubs,
+        alt: 'Me sumo - Vista de clubes',
+      },
+      {
+        img: ViewClub,
+        alt: 'Me sumo - Vista de club en especifico',
+      },
+      {
+        img: CreateEventProfile,
+        alt: 'Me sumo - Crear evento desde el perfil de usuario',
+      },
+      {
+        img: CreateEvent,
+        alt: 'Me sumo - Crear evento',
+      },
+    ],
   },
   {
     id: 2,
@@ -38,8 +76,7 @@ export const ProyectsData = [
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     linkWeb: null,
     linkCodigo: null,
-    img: [proyecto],
-    alt: 'digital booking, alquiler de autos',
+    images: [{ img: proyecto, alt: 'Digital Booking - Pagina principal' }],
   },
   {
     id: 3,
@@ -48,8 +85,7 @@ export const ProyectsData = [
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
-    img: [clinica],
-    alt: 'clinica dental',
+    images: [{ img: clinica, alt: 'Clinica Dental - Pagina principal' }],
   },
   {
     id: 4,
@@ -58,8 +94,7 @@ export const ProyectsData = [
       'App funcional para calcular la propina a dar teniendo en cuenta el monto total, la cantidad de personas que pagan y el porcentaje que se desea dejar a modo de propina. Luego, mostrar el monto total y monto de la propina a pagar por persona.',
     linkWeb: 'https://aquamantop.github.io/tip-calculator/',
     linkCodigo: 'https://github.com/aquamantop/tip-calculator',
-    img: [calculator],
-    alt: 'pagina para calcular propina',
+    images: [{ img: calculator, alt: 'Tip calculator' }],
   },
   {
     id: 5,
@@ -68,8 +103,7 @@ export const ProyectsData = [
       'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
     linkWeb: 'https://aquamantop.github.io/Minijuego/',
     linkCodigo: 'https://github.com/aquamantop/Minijuego',
-    img: [ppt],
-    alt: 'pagina de piedra papel y tijera',
+    images: [{ img: ppt, alt: 'Piedra Papel o Tijera' }],
   },
   {
     id: 6,
@@ -78,8 +112,7 @@ export const ProyectsData = [
       'Pagina simple con una tarjeta donde se puntua del 1 al 5, devolviendo otra tarjeta con la puntuacion y un agradecimiento.',
     linkWeb: 'https://aquamantop.github.io/Interactive-rating-component/',
     linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
-    img: [rating],
-    alt: 'interactive-rating',
+    images: [{ img: rating, alt: 'Interactive-rating' }],
   },
 ]
 
@@ -127,4 +160,4 @@ export const TechData = [
     icon: <BsServer />,
     items: ['MySQL', 'MongoDB'],
   },
-];
+]

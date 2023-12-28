@@ -19,11 +19,11 @@ export const SDprimary = '#2E90A6'
 export const SDsecondary = '#72E5F2'
 export const SDcomplement = '#D8F279'
 
-// Static light mode
+// Text light mode
 export const Ltitles = '#EEEEEE'
 export const Ltext = '#0D0D0D'
 
-// Static dark mode
+// Text dark mode
 export const titles = '#0D0D0D'
 export const text = '#f5f5f5'
 
