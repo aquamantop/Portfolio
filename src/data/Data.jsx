@@ -1,7 +1,14 @@
-import clinica from '../assets/clinica.webp'
-import calculator from '../assets/tip-calculator.webp'
-import ppt from '../assets/ppt.webp'
-import rating from '../assets/rating.webp'
+// Clinica dental
+import Clinica from '../assets/clinica.webp'
+// Tip calculator
+import Calculator from '../assets/tip-calculator/home.webp'
+import CalculatorComplete from '../assets/tip-calculator/propina-calculada.webp'
+// Piedra papel o tijera
+import Ppt from '../assets/ppt/home.webp'
+// Interactive rating
+import Rating from '../assets/interactive-rating/home.webp'
+import RatingSelected from '../assets/interactive-rating/rating-seleccionado.webp'
+// Me sumo
 import Home from '../assets/me-sumo/home.webp'
 import Clubs from '../assets/me-sumo/clubes.webp'
 import CreateEventProfile from '../assets/me-sumo/crear-evento-perfil.webp'
@@ -12,7 +19,9 @@ import Profile from '../assets/me-sumo/perfil.webp'
 import Register from '../assets/me-sumo/registrar.webp'
 import JoinEvent from '../assets/me-sumo/sumarse-evento.webp'
 import ViewClub from '../assets/me-sumo/vista-club.webp'
-import proyecto from '../assets/proyecto-final.webp'
+// Digital Booking
+import Proyecto from '../assets/proyecto-final.webp'
+// Iconos
 import { GrServerCluster } from 'react-icons/gr'
 import { BiSolidDevices } from 'react-icons/bi'
 import { MdCloudDone } from 'react-icons/md'
@@ -76,7 +85,7 @@ export const ProyectsData = [
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     linkWeb: null,
     linkCodigo: null,
-    images: [{ img: proyecto, alt: 'Digital Booking - Pagina principal' }],
+    images: [{ img: Proyecto, alt: 'Digital Booking - Pagina principal' }],
   },
   {
     id: 3,
@@ -85,7 +94,7 @@ export const ProyectsData = [
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
-    images: [{ img: clinica, alt: 'Clinica Dental - Pagina principal' }],
+    images: [{ img: Clinica, alt: 'Clinica Dental - Pagina principal' }],
   },
   {
     id: 4,
@@ -94,7 +103,10 @@ export const ProyectsData = [
       'App funcional para calcular la propina a dar teniendo en cuenta el monto total, la cantidad de personas que pagan y el porcentaje que se desea dejar a modo de propina. Luego, mostrar el monto total y monto de la propina a pagar por persona.',
     linkWeb: 'https://aquamantop.github.io/tip-calculator/',
     linkCodigo: 'https://github.com/aquamantop/tip-calculator',
-    images: [{ img: calculator, alt: 'Tip calculator' }],
+    images: [
+      { img: Calculator, alt: 'Tip calculator - Pagina principal' },
+      // { img: CalculatorComplete, alt: 'Tip calculator - Propina calculada' },
+    ],
   },
   {
     id: 5,
@@ -103,7 +115,9 @@ export const ProyectsData = [
       'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
     linkWeb: 'https://aquamantop.github.io/Minijuego/',
     linkCodigo: 'https://github.com/aquamantop/Minijuego',
-    images: [{ img: ppt, alt: 'Piedra Papel o Tijera' }],
+    images: [
+      { img: Ppt, alt: 'Piedra Papel o Tijera - Pagina principal' },
+    ],
   },
   {
     id: 6,
@@ -112,7 +126,10 @@ export const ProyectsData = [
       'Pagina simple con una tarjeta donde se puntua del 1 al 5, devolviendo otra tarjeta con la puntuacion y un agradecimiento.',
     linkWeb: 'https://aquamantop.github.io/Interactive-rating-component/',
     linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
-    images: [{ img: rating, alt: 'Interactive-rating' }],
+    images: [
+      { img: Rating, alt: 'Interactive rating - Pagina principal' },
+      // { img: RatingSelected, alt: 'Interactive rating - Rating seleccionado' },
+    ],
   },
 ]
 

@@ -4,7 +4,6 @@ import {
   PortfolioStyleMobile,
   PortfolioStyle,
   ProjectStyle,
-  ImagePortfolio,
   CustomButton,
   TextSX,
   SubtitleSX,
@@ -32,7 +31,7 @@ const Portfolio = () => {
         >
           <Typography
             variant="h6"
-            sx={{ ...SubtitleSX, textDecoration: 'underline', mb: 2 }}
+            sx={{ ...SubtitleSX, textDecoration: 'underline'}}
           >
             {p.titulo}
           </Typography>

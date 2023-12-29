@@ -104,11 +104,6 @@ export const ProjectStyle = {
   boxSizing: 'border-box',
 }
 
-export const ImagePortfolio = {
-  width: '100%',
-  marginBottom: '10px',
-}
-
 export const ButtonStyle = {
   height: '3rem',
   mr: '10px',
