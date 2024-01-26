@@ -105,7 +105,7 @@ export const ProyectsData = [
     linkCodigo: 'https://github.com/aquamantop/tip-calculator',
     images: [
       { img: Calculator, alt: 'Tip calculator - Pagina principal' },
-      // { img: CalculatorComplete, alt: 'Tip calculator - Propina calculada' },
+      { img: CalculatorComplete, alt: 'Tip calculator - Propina calculada' },
     ],
   },
   {
@@ -128,7 +128,7 @@ export const ProyectsData = [
     linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
     images: [
       { img: Rating, alt: 'Interactive rating - Pagina principal' },
-      // { img: RatingSelected, alt: 'Interactive rating - Rating seleccionado' },
+      { img: RatingSelected, alt: 'Interactive rating - Rating seleccionado' },
     ],
   },
 ]

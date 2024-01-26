@@ -19,13 +19,13 @@ const Portfolio = () => {
   const isMobile = useMediaQuery('(max-width:768px)')
 
   return (
-    <section
-      style={isMobile ? { ...PortfolioStyleMobile } : { ...PortfolioStyle }}
+    <Box
+      sx={isMobile ? { ...PortfolioStyleMobile } : { ...PortfolioStyle }}
     >
       {projects.map((p) => (
-        <article
+        <Box
           key={p.id}
-          style={{
+          sx={{
             ...ProjectStyle,
           }}
         >
@@ -38,7 +38,7 @@ const Portfolio = () => {
 
           <CarouselComponent images={p.images} />
 
-          <Typography variant="body2" sx={{ ...TextSX }}>
+          <Typography mt={2} variant="body2" sx={{ ...TextSX }}>
             {p.descripcion}
           </Typography>
 
@@ -54,9 +54,9 @@ const Portfolio = () => {
               disabled={p.linkWeb == null}
             />
           </Box>
-        </article>
+        </Box>
       ))}
-    </section>
+    </Box>
   )
 }
 

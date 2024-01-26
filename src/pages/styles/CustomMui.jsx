@@ -78,19 +78,17 @@ export const LinkFooter = {
 /************************************************ */
 export const PortfolioStyle = {
   display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)',
+  gridTemplateColumns: '1fr',
   alignItems: 'center',
   textAlign: 'center',
-  maxWidth: '100vw',
-  margin: '0 auto',
+  marginX: '10rem',
 }
 export const PortfolioStyleMobile = {
   display: 'grid',
   gridTemplateColumns: '1fr',
   alignItems: 'center',
   textAlign: 'center',
-  maxWidth: '100vw',
-  margin: '0 auto',
+  marginX: '4rem',
 }
 
 export const ProjectStyle = {
@@ -106,6 +104,7 @@ export const ProjectStyle = {
 
 export const ButtonStyle = {
   height: '3rem',
+  mb: '1rem',
   mr: '10px',
   textAlign: 'center',
   color: 'complement.main',
@@ -140,9 +139,9 @@ export const CustomButton = ({ buttonText, href, disabled }) => {
   )
 }
 
-/******************************************************** */
-/*  Estilos para Tabs (cambiar seccion inicio y portfolio */
-/******************************************************** */
+/********************************************************* */
+/*  Estilos para Tabs (cambiar seccion inicio y portfolio) */
+/********************************************************* */
 export const TabsStyleSX = {
   backgroundColor: 'background.button',
 }
@@ -156,5 +155,38 @@ export const TabSX = {
   '&:hover': {
     color: 'text.title',
     backgroundColor: 'secondary.main',
+  },
+}
+
+/************ */
+/*  Carousel */
+/*********** */
+export const BoxImagesContainer = {
+  display:'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
+export const BoxImage = {
+  display:'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
+export const ImageSX = {
+  width: '100%',
+  height: '100%',
+}
+
+export const ButtonImage = {
+  borderRadius: '1rem',
+  mx: '10px',
+  padding: '1rem',
+  color: 'complement.main',
+  borderColor: 'complement.main',
+  backgroundColor: 'background.button',
+  '&:hover': {
+    backgroundColor: 'secondary.main',
+    color: 'text.title',
   },
 }

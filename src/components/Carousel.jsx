@@ -1,32 +1,44 @@
-import { Carousel } from 'react-carousel-minimal'
+import { Box, Button } from '@mui/material'
+import { useState } from 'react'
+import {
+  BoxImagesContainer,
+  BoxImage,
+  ImageSX,
+  ButtonImage,
+} from '../pages/styles/CustomMui'
 
 const CarouselComponent = ({ images }) => {
   const data = images.map((item) => {
     return {
-      image: item.img,
-      caption: item.alt
+      src: item.img,
+      alt: item.alt,
     }
   })
-  
-  const captionStyle = {
-    display: 'none',
+  const [current, setCurrent] = useState(0)
+
+  const next = () => {
+    setCurrent((current + 1) % images.length)
+  }
+  const prev = () => {
+    setCurrent((current - 1 + images.length) % images.length)
   }
 
   return (
-    <Carousel
-      data={data}
-      width="100%"
-      height="100%"
-      slideNumber={false}
-      automatic={false}
-      captionStyle={captionStyle}
-      dots={true}
-      slideBackgroundColor="darkgrey"
-      slideImageFit="contain"
-      style={{
-        margin: '15px 0px',
-      }}
-    />
+    <Box sx={{ ...BoxImagesContainer }}>
+      <Box sx={{ ...BoxImage }}>
+        <Button sx={{ ...ButtonImage }} size="small" onClick={prev}>
+          {'\u276E'}
+        </Button>
+        <img
+          style={{ ...ImageSX }}
+          src={data[current].src}
+          alt={data[current].alt}
+        />
+        <Button sx={{ ...ButtonImage }} size="small"onClick={next}>
+          {'\u276F'}
+        </Button>
+      </Box>
+    </Box>
   )
 }
 
