@@ -26,17 +26,19 @@ const CarouselComponent = ({ images }) => {
   return (
     <Box sx={{ ...BoxImagesContainer }}>
       <Box sx={{ ...BoxImage }}>
-        <Button sx={{ ...ButtonImage }} size="small" onClick={prev}>
-          {'\u276E'}
-        </Button>
         <img
           style={{ ...ImageSX }}
           src={data[current].src}
           alt={data[current].alt}
         />
-        <Button sx={{ ...ButtonImage }} size="small"onClick={next}>
-          {'\u276F'}
-        </Button>
+        <Box>
+          <Button sx={{ ...ButtonImage }} size="small" onClick={prev}>
+            {'\u276E'}
+          </Button>
+          <Button sx={{ ...ButtonImage }} size="small" onClick={next}>
+            {'\u276F'}
+          </Button>
+        </Box>
       </Box>
     </Box>
   )

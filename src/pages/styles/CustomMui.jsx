@@ -158,9 +158,9 @@ export const TabSX = {
   },
 }
 
-/************ */
-/*  Carousel */
 /*********** */
+/* Carousel */
+/********** */
 export const BoxImagesContainer = {
   display:'flex',
   justifyContent: 'center',
@@ -169,6 +169,7 @@ export const BoxImagesContainer = {
 
 export const BoxImage = {
   display:'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center'
 }
@@ -180,8 +181,9 @@ export const ImageSX = {
 
 export const ButtonImage = {
   borderRadius: '1rem',
-  mx: '10px',
-  padding: '1rem',
+  mx: '5px',
+  mt: '15px',
+  padding: '5px',
   color: 'complement.main',
   borderColor: 'complement.main',
   backgroundColor: 'background.button',
