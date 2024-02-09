@@ -1,26 +1,45 @@
 // Clinica dental
-import Clinica from '../assets/clinica.webp'
+import CDHome from '../assets/clinica/clinica.webp'
+import CDAddDentist from '../assets/clinica/agregar-odontologo.webp'
+import CDAddPatient from '../assets/clinica/agregar-paciente.webp'
+import CDAddAppointment from '../assets/clinica/agregar-turno.webp'
+import CDDentists from '../assets/clinica/odontologos.webp'
+import CDPatients from '../assets/clinica/pacientes.webp'
+import CDAppointment from '../assets/clinica/turnos.webp'
 // Tip calculator
 import Calculator from '../assets/tip-calculator/home.webp'
 import CalculatorComplete from '../assets/tip-calculator/propina-calculada.webp'
 // Piedra papel o tijera
-import Ppt from '../assets/ppt/home.webp'
+import PptHome from '../assets/ppt/home.webp'
+import PptPartida from '../assets/ppt/partida.webp'
+import PptWin from '../assets/ppt/ganador.webp'
+import PptLose from '../assets/ppt/perdedor.webp'
+import PptDraw from '../assets/ppt/empate.webp'
 // Interactive rating
 import Rating from '../assets/interactive-rating/home.webp'
 import RatingSelected from '../assets/interactive-rating/rating-seleccionado.webp'
 // Me sumo
-import Home from '../assets/me-sumo/home.webp'
-import Clubs from '../assets/me-sumo/clubes.webp'
-import CreateEventProfile from '../assets/me-sumo/crear-evento-perfil.webp'
-import CreateEvent from '../assets/me-sumo/crear-evento.webp'
-import Login from '../assets/me-sumo/login.webp'
-import Menu from '../assets/me-sumo/menu.webp'
-import Profile from '../assets/me-sumo/perfil.webp'
-import Register from '../assets/me-sumo/registrar.webp'
-import JoinEvent from '../assets/me-sumo/sumarse-evento.webp'
-import ViewClub from '../assets/me-sumo/vista-club.webp'
+import MSHome from '../assets/me-sumo/home.webp'
+import MSClubs from '../assets/me-sumo/clubes.webp'
+import MSCreateEventProfile from '../assets/me-sumo/crear-evento-perfil.webp'
+import MSCreateEvent from '../assets/me-sumo/crear-evento.webp'
+import MSLogin from '../assets/me-sumo/login.webp'
+import MSMenu from '../assets/me-sumo/menu.webp'
+import MSProfile from '../assets/me-sumo/perfil.webp'
+import MSRegister from '../assets/me-sumo/registrar.webp'
+import MSJoinEvent from '../assets/me-sumo/sumarse-evento.webp'
+import MSViewClub from '../assets/me-sumo/vista-club.webp'
 // Digital Booking
-import Proyecto from '../assets/proyecto-final.webp'
+import CTDHome from '../assets/proyecto-ctd/home-login.webp'
+import CTDLogin from '../assets/proyecto-ctd/login.webp'
+import CTDRegister from '../assets/proyecto-ctd/registro.webp'
+import CTDHomeFilter from '../assets/proyecto-ctd/home-filtro.webp'
+import CTDBooknig from '../assets/proyecto-ctd/reserva.webp'
+import CTDMyBooknigs from '../assets/proyecto-ctd/mis-reservas.webp'
+import CTDBookingSuccess from '../assets/proyecto-ctd/reserva-exitosa.webp'
+import CTDProduct from '../assets/proyecto-ctd/producto.webp'
+import CTDInfoBooking from '../assets/proyecto-ctd/datos-reserva.webp'
+import CTDAdmin from '../assets/proyecto-ctd/admin.webp'
 // Iconos
 import { GrServerCluster } from 'react-icons/gr'
 import { BiSolidDevices } from 'react-icons/bi'
@@ -36,46 +55,19 @@ export const ProyectsData = [
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
     images: [
+      { src: MSHome, alt: 'Me sumo - Pagina principal' },
+      { src: MSLogin, alt: 'Me sumo - Iniciar Sesion' },
+      { src: MSRegister, alt: 'Me sumo - Registrarse' },
+      { src: MSMenu, alt: 'Me sumo - Menu' },
+      { src: MSProfile, alt: 'Me sumo - Perfil' },
+      { src: MSJoinEvent, alt: 'Me sumo - Sumarse a un evento' },
+      { src: MSClubs, alt: 'Me sumo - Vista de clubes' },
+      { src: MSViewClub, alt: 'Me sumo - Vista de club en especifico' },
       {
-        src: Home,
-        alt: 'Me sumo - Pagina principal',
+        src: MSCreateEventProfile,
+        alt: 'Me sumo - Crear evento desde el usuario',
       },
-      {
-        src: Login,
-        alt: 'Me sumo - Iniciar Sesion',
-      },
-      {
-        src: Register,
-        alt: 'Me sumo - Registrarse',
-      },
-      {
-        src: Menu,
-        alt: 'Me sumo - Menu',
-      },
-      {
-        src: Profile,
-        alt: 'Me sumo - Perfil',
-      },
-      {
-        src: JoinEvent,
-        alt: 'Me sumo - Sumarse a un evento',
-      },
-      {
-        src: Clubs,
-        alt: 'Me sumo - Vista de clubes',
-      },
-      {
-        src: ViewClub,
-        alt: 'Me sumo - Vista de club en especifico',
-      },
-      {
-        src: CreateEventProfile,
-        alt: 'Me sumo - Crear evento desde el perfil de usuario',
-      },
-      {
-        src: CreateEvent,
-        alt: 'Me sumo - Crear evento',
-      },
+      { src: MSCreateEvent, alt: 'Me sumo - Crear evento' },
     ],
   },
   {
@@ -85,7 +77,24 @@ export const ProyectsData = [
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     linkWeb: null,
     linkCodigo: null,
-    images: [{ src: Proyecto, alt: 'Digital Booking - Pagina principal' }],
+    images: [
+      { src: CTDHome, alt: 'Digital Booking - Pagina principal' },
+      {
+        src: CTDHomeFilter,
+        alt: 'Digital Booking - Pagina principal con filtro',
+      },
+      { src: CTDProduct, alt: 'Digital Booking - Producto' },
+      { src: CTDBooknig, alt: 'Digital Booking - Reserva' },
+      {
+        src: CTDInfoBooking,
+        alt: 'Digital Booking - Informacion de la reserva',
+      },
+      { src: CTDBookingSuccess, alt: 'Digital Booking - Reserva exitosa' },
+      { src: CTDMyBooknigs, alt: 'Digital Booking - Mis reservas' },
+      { src: CTDRegister, alt: 'Digital Booking - Registrarse' },
+      { src: CTDLogin, alt: 'Digital Booking - Iniciar Sesion' },
+      { src: CTDAdmin, alt: 'Digital Booking - Pagina de administrador' },
+    ],
   },
   {
     id: 3,
@@ -94,7 +103,15 @@ export const ProyectsData = [
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
-    images: [{ src: Clinica, alt: 'Clinica Dental - Pagina principal' }],
+    images: [
+      { src: CDHome, alt: 'Clinica Dental - Pagina principal' },
+      { src: CDDentists, alt: 'Clinica Dental - Portal odontologos' },
+      { src: CDPatients, alt: 'Clinica Dental - Portal pacientes' },
+      { src: CDAppointment, alt: 'Clinica Dental - Portal turnos' },
+      { src: CDAddDentist, alt: 'Clinica Dental - Agregar odontologo' },
+      { src: CDAddPatient, alt: 'Clinica Dental - Agregar paciente' },
+      { src: CDAddAppointment, alt: 'Clinica Dental - Agregar turno' },
+    ],
   },
   {
     id: 4,
@@ -115,7 +132,13 @@ export const ProyectsData = [
       'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
     linkWeb: 'https://aquamantop.github.io/Minijuego/',
     linkCodigo: 'https://github.com/aquamantop/Minijuego',
-    images: [{ src: Ppt, alt: 'Piedra Papel o Tijera - Pagina principal' }],
+    images: [
+      { src: PptHome, alt: 'Piedra Papel o Tijera - Pagina principal' },
+      { src: PptPartida, alt: 'Piedra Papel o Tijera - Comenzar Partida' },
+      { src: PptWin, alt: 'Piedra Papel o Tijera - Victoria' },
+      { src: PptLose, alt: 'Piedra Papel o Tijera - Derrota' },
+      { src: PptDraw, alt: 'Piedra Papel o Tijera - Empate' },
+    ],
   },
   {
     id: 6,
