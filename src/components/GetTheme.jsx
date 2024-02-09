@@ -109,5 +109,22 @@ export const createAppTheme = (themeColors) => {
         title: themeColors.titles,
       },
     },
+    typography: {
+      allVariants: {
+        textWrap: "balance",
+      },
+      body1: {
+        textWrap: "pretty",
+      },
+      body2: {
+        textWrap: "pretty",
+      },
+    },
+    typography: {
+      fontFamily: [
+        'Roboto',        
+        'Lato',
+      ].join(','),
+    },
   })
 }
