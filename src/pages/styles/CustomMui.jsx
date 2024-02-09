@@ -78,22 +78,21 @@ export const LinkFooter = {
 /************************************************ */
 export const PortfolioStyle = {
   display: 'grid',
-  gridTemplateColumns: '1fr',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  maxWidth: '100%',
   alignItems: 'center',
   textAlign: 'center',
-  marginX: '10rem',
 }
 export const PortfolioStyleMobile = {
   display: 'grid',
   gridTemplateColumns: '1fr',
   alignItems: 'center',
   textAlign: 'center',
-  marginX: '4rem',
 }
 
 export const ProjectStyle = {
-  display: 'grid',  
-  gridTemplateRows: 'auto auto 1fr auto', 
+  display: 'grid',
+  gridTemplateRows: 'auto auto 2fr auto',
   marginBottom: '20px',
   border: '1px solid text.ligth',
   padding: '20px',
@@ -139,6 +138,18 @@ export const CustomButton = ({ buttonText, href, disabled }) => {
   )
 }
 
+export const BoxImagesContainer = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}
+
+export const ImageSX = {
+  width: '100%',
+  height: '100%',
+  cursor: 'pointer',
+}
+
 /********************************************************* */
 /*  Estilos para Tabs (cambiar seccion inicio y portfolio) */
 /********************************************************* */
@@ -161,34 +172,14 @@ export const TabSX = {
 /*********** */
 /* Carousel */
 /********** */
-export const BoxImagesContainer = {
-  display:'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
+export const ModalSX = {
+  position: 'absolute',
+  top: '5%',
+  left: '10%',
+  width: '80%',
 }
 
-export const BoxImage = {
-  display:'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center'
-}
-
-export const ImageSX = {
-  width: '100%',
-  height: '100%',
-}
-
-export const ButtonImage = {
-  borderRadius: '1rem',
-  mx: '5px',
-  mt: '15px',
-  padding: '5px',
-  color: 'complement.main',
-  borderColor: 'complement.main',
-  backgroundColor: 'background.button',
-  '&:hover': {
-    backgroundColor: 'secondary.main',
-    color: 'text.title',
-  },
+export const ImagesCarousel = {
+  width: "100%",
+  height: "100%"
 }

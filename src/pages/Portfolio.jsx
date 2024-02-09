@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Typography, Modal } from '@mui/material'
+import React, { useState } from 'react'
 import {
   PortfolioStyleMobile,
   PortfolioStyle,
@@ -8,6 +8,9 @@ import {
   TextSX,
   SubtitleSX,
   ButtonContainer,
+  BoxImagesContainer,
+  ImageSX,
+  ModalSX,
 } from './styles/CustomMui'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { ProyectsData } from '../data/Data'
@@ -17,11 +20,24 @@ const projects = ProyectsData
 
 const Portfolio = () => {
   const isMobile = useMediaQuery('(max-width:768px)')
+  const [openModals, setOpenModals] = useState(
+    Array(projects.length).fill(false),
+  )
+
+  const handleOpenModal = (index) => {
+    const newOpenModals = [...openModals]
+    newOpenModals[index] = true
+    setOpenModals(newOpenModals)
+  }
+
+  const handleCloseModal = (index) => {
+    const newOpenModals = [...openModals]
+    newOpenModals[index] = false
+    setOpenModals(newOpenModals)
+  }
 
   return (
-    <Box
-      sx={isMobile ? { ...PortfolioStyleMobile } : { ...PortfolioStyle }}
-    >
+    <Box sx={isMobile ? { ...PortfolioStyleMobile } : { ...PortfolioStyle }}>
       {projects.map((p) => (
         <Box
           key={p.id}
@@ -31,12 +47,19 @@ const Portfolio = () => {
         >
           <Typography
             variant="h6"
-            sx={{ ...SubtitleSX, textDecoration: 'underline'}}
+            sx={{ ...SubtitleSX, textDecoration: 'underline' }}
           >
             {p.titulo}
           </Typography>
 
-          <CarouselComponent images={p.images} />
+          <Box sx={{ ...BoxImagesContainer }}>
+            <img
+              style={{ ...ImageSX }}
+              src={p.images[0].src}
+              alt={p.images[0].alt}
+              onClick={() => handleOpenModal(p.id - 1)}
+            />
+          </Box>
 
           <Typography mt={2} variant="body2" sx={{ ...TextSX }}>
             {p.descripcion}
@@ -54,6 +77,16 @@ const Portfolio = () => {
               disabled={p.linkWeb == null}
             />
           </Box>
+
+          <Modal
+            sx={{ ...ModalSX }}
+            open={openModals[p.id - 1]}
+            onClose={() => handleCloseModal(p.id - 1)}
+          >
+            <Box>
+              <CarouselComponent images={p.images} />
+            </Box>
+          </Modal>
         </Box>
       ))}
     </Box>

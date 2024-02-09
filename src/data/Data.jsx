@@ -37,43 +37,43 @@ export const ProyectsData = [
     linkCodigo: 'https://github.com/aquamantop/Me-Sumo',
     images: [
       {
-        img: Home,
+        src: Home,
         alt: 'Me sumo - Pagina principal',
       },
       {
-        img: Login,
+        src: Login,
         alt: 'Me sumo - Iniciar Sesion',
       },
       {
-        img: Register,
+        src: Register,
         alt: 'Me sumo - Registrarse',
       },
       {
-        img: Menu,
+        src: Menu,
         alt: 'Me sumo - Menu',
       },
       {
-        img: Profile,
+        src: Profile,
         alt: 'Me sumo - Perfil',
       },
       {
-        img: JoinEvent,
+        src: JoinEvent,
         alt: 'Me sumo - Sumarse a un evento',
       },
       {
-        img: Clubs,
+        src: Clubs,
         alt: 'Me sumo - Vista de clubes',
       },
       {
-        img: ViewClub,
+        src: ViewClub,
         alt: 'Me sumo - Vista de club en especifico',
       },
       {
-        img: CreateEventProfile,
+        src: CreateEventProfile,
         alt: 'Me sumo - Crear evento desde el perfil de usuario',
       },
       {
-        img: CreateEvent,
+        src: CreateEvent,
         alt: 'Me sumo - Crear evento',
       },
     ],
@@ -85,7 +85,7 @@ export const ProyectsData = [
       'Sitio de alquiler de autos. Este es el proyecto integrador final del Certified Tech Developer en Digital House. El proyecto se desarrollo bajo la metodología de 4 sprints a lo largo de 2 meses con un grupo de trabajo mediante GitLab, se trabajo en el backend con Java para la API, con JS para el front, MySQL para la base de datos y la infraestructura en AWS.',
     linkWeb: null,
     linkCodigo: null,
-    images: [{ img: Proyecto, alt: 'Digital Booking - Pagina principal' }],
+    images: [{ src: Proyecto, alt: 'Digital Booking - Pagina principal' }],
   },
   {
     id: 3,
@@ -94,7 +94,7 @@ export const ProyectsData = [
       'Aplicación de turnos odontológicos con Spring Boot y API Rest principalmente, Hibernate como ORM, PostgreSQL como BBDD y JavaScrip para el front. Utilizando Heroku para el deploy.',
     linkWeb: null,
     linkCodigo: 'https://github.com/aquamantop/Clinica-dental',
-    images: [{ img: Clinica, alt: 'Clinica Dental - Pagina principal' }],
+    images: [{ src: Clinica, alt: 'Clinica Dental - Pagina principal' }],
   },
   {
     id: 4,
@@ -104,8 +104,8 @@ export const ProyectsData = [
     linkWeb: 'https://aquamantop.github.io/tip-calculator/',
     linkCodigo: 'https://github.com/aquamantop/tip-calculator',
     images: [
-      { img: Calculator, alt: 'Tip calculator - Pagina principal' },
-      { img: CalculatorComplete, alt: 'Tip calculator - Propina calculada' },
+      { src: Calculator, alt: 'Tip calculator - Pagina principal' },
+      { src: CalculatorComplete, alt: 'Tip calculator - Propina calculada' },
     ],
   },
   {
@@ -115,9 +115,7 @@ export const ProyectsData = [
       'Clasico juego de piedra, papel o tijera eligiendo por medio de tarjetas.',
     linkWeb: 'https://aquamantop.github.io/Minijuego/',
     linkCodigo: 'https://github.com/aquamantop/Minijuego',
-    images: [
-      { img: Ppt, alt: 'Piedra Papel o Tijera - Pagina principal' },
-    ],
+    images: [{ src: Ppt, alt: 'Piedra Papel o Tijera - Pagina principal' }],
   },
   {
     id: 6,
@@ -127,8 +125,8 @@ export const ProyectsData = [
     linkWeb: 'https://aquamantop.github.io/Interactive-rating-component/',
     linkCodigo: 'https://github.com/aquamantop/Interactive-rating-component',
     images: [
-      { img: Rating, alt: 'Interactive rating - Pagina principal' },
-      { img: RatingSelected, alt: 'Interactive rating - Rating seleccionado' },
+      { src: Rating, alt: 'Interactive rating - Pagina principal' },
+      { src: RatingSelected, alt: 'Interactive rating - Rating seleccionado' },
     ],
   },
 ]

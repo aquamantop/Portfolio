@@ -1,45 +1,43 @@
-import { Box, Button } from '@mui/material'
-import { useState } from 'react'
-import {
-  BoxImagesContainer,
-  BoxImage,
-  ImageSX,
-  ButtonImage,
-} from '../pages/styles/CustomMui'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+import { Box, useMediaQuery } from '@mui/material'
+import { ImagesCarousel } from '../pages/styles/CustomMui'
 
 const CarouselComponent = ({ images }) => {
-  const data = images.map((item) => {
-    return {
-      src: item.img,
-      alt: item.alt,
-    }
-  })
-  const [current, setCurrent] = useState(0)
-
-  const next = () => {
-    setCurrent((current + 1) % images.length)
-  }
-  const prev = () => {
-    setCurrent((current - 1 + images.length) % images.length)
-  }
+  const isMobile = useMediaQuery('(max-width:768px)')
+  const isPc = useMediaQuery('(min-width:1800px)')
 
   return (
-    <Box sx={{ ...BoxImagesContainer }}>
-      <Box sx={{ ...BoxImage }}>
-        <img
-          style={{ ...ImageSX }}
-          src={data[current].src}
-          alt={data[current].alt}
-        />
-        <Box>
-          <Button sx={{ ...ButtonImage }} size="small" onClick={prev}>
-            {'\u276E'}
-          </Button>
-          <Button sx={{ ...ButtonImage }} size="small" onClick={next}>
-            {'\u276F'}
-          </Button>
-        </Box>
-      </Box>
+    <Box>
+      <Swiper
+        style={
+          isMobile
+            ? { height: '350px' }
+            : isPc
+            ? { height: '850px' }
+            : { height: '700px' }
+        }
+        navigation={true}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Navigation, Pagination]}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              style={{ ...ImagesCarousel }}
+              src={image.src}
+              alt={image.alt}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </Box>
   )
 }
