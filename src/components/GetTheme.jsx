@@ -108,6 +108,10 @@ export const createAppTheme = (themeColors) => {
         main: themeColors.text,
         title: themeColors.titles,
       },
+      action: {
+        disabledBackground: themeColors.titles,
+        disabled: themeColors.complement,
+      },
     },
     typography: {
       allVariants: {
