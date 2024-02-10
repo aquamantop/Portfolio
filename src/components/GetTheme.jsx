@@ -123,8 +123,6 @@ export const createAppTheme = (themeColors) => {
       body2: {
         textWrap: "pretty",
       },
-    },
-    typography: {
       fontFamily: [
         'Roboto',        
         'Lato',
