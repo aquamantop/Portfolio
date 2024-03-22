@@ -5,14 +5,11 @@ import { TextSX } from '../pages/styles/CustomMui'
 
 const AddTechnologies = () => {
   return TechData.map((tech, index) => (
-    <List key={`list-${index}`}>
+    <List key={tech.id}>
       <Box>
-        <ListItemText
-          sx={{ ml:"50px" }}
-          key={`category-text-${index}`}
-          >
+        <ListItemText sx={{ ml: '50px' }} key={`category-text-${index}`}>
           {tech.category}
-          <ListItemIcon sx={{ ...TextSX, mx:"10px" }} key={`icon-${index}`}>
+          <ListItemIcon sx={{ ...TextSX, mx: '10px' }} key={`icon-${index}`}>
             {tech.icon}
           </ListItemIcon>
         </ListItemText>
@@ -22,7 +19,12 @@ const AddTechnologies = () => {
           {item}
         </ListItemText>
       ))}
-      {index < TechData.length - 1 && <Divider variant="middle" sx={{ backgroundColor:"text.main" }} />}
+      {index < TechData.length - 1 && (
+        <Divider
+          variant="middle"
+          sx={{ backgroundColor: 'text.main', mt: 2 }}
+        />
+      )}
     </List>
   ))
 }

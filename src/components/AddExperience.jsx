@@ -1,5 +1,5 @@
 import React from 'react'
-import { EducationData } from '../data/Data'
+import { ExperienceData } from '../data/Data'
 import {
   Divider,
   List,
@@ -8,8 +8,8 @@ import {
   Typography,
 } from '@mui/material'
 
-const AddEducation = () => {
-  return EducationData.map((item, index) => (
+const AddExperience = () => {
+  return ExperienceData.map((item, index) => (
     <List key={item.id}>
       <ListItem sx={{ display: 'flex', flexDirection: 'column' }}>
         <ListItemText sx={{ textAlign: 'center' }}>
@@ -18,7 +18,7 @@ const AddEducation = () => {
 
         <ListItemText sx={{ textAlign: 'center' }}>
           <Typography variant="subtitle1">
-            {item.institution} | {item.date}
+            {item.company} | {item.date}
           </Typography>
         </ListItemText>
 
@@ -26,14 +26,11 @@ const AddEducation = () => {
           <Typography variant="body1">{item.description}</Typography>
         </ListItemText>
       </ListItem>
-      {index < EducationData.length - 1 && (
-        <Divider
-          variant="middle"
-          sx={{ backgroundColor: 'text.main', mt: 2 }}
-        />
+      {index < ExperienceData.length - 1 && (
+        <Divider variant="middle" sx={{ backgroundColor: 'text.main' }} />
       )}
     </List>
   ))
 }
 
-export default AddEducation
+export default AddExperience

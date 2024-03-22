@@ -156,13 +156,15 @@ export const ProyectsData = [
 
 export const EducationData = [
   {
+    id: 1,
     title: 'CERTIFIED TECH DEVELOPER',
     institution: 'Digital House',
-    date: 'May 2021 - December 2022',
+    date: 'Mayo 2021 - December 2022',
     description:
       'Beca otorgada por Digital House, Mercado Libre y Globant, quien en conjunto desarrollaron el programa de la carrera.',
   },
   {
+    id: 2,
     title: 'BACKEND SPECIALIST',
     institution: 'Digital House',
     date: 'Febrero 2023 - Diciembre 2023',
@@ -170,32 +172,48 @@ export const EducationData = [
       'Continuación del Certified Tech Developer, especializándome en el área del backend, aprendiendo desde el desarrollo de microservicios con Java (Spring Boot y Spring Cloud) y con Go (Gin), la seguridad con IAM (Keycloak)',
   },
   {
+    id: 3,
     title: 'LIC. EN PSICOLOGÍA',
     institution: 'Universidad de Buenos Aires',
-    date: '2016 - act.',
+    date: '2016 - Presente',
     description: '',
   },
 ]
 
 export const TechData = [
   {
+    id: 1,
     category: 'Backend',
     icon: <GrServerCluster />,
-    items: ['Java', 'Spring Boot', 'Go'],
+    items: ['Java', 'Spring Boot'],
   },
   {
+    id: 2,
     category: 'Frontend',
     icon: <BiSolidDevices />,
-    items: ['HTML/CSS', 'JavaScript', 'React'],
+    items: ['HTML/CSS', 'JavaScript', 'React', 'TypeScript'],
   },
   {
+    id: 3,
     category: 'Infraestructura',
     icon: <MdCloudDone />,
     items: ['AWS', 'Docker', 'Github Actions'],
   },
   {
+    id: 4,
     category: 'Base de datos',
     icon: <BsServer />,
     items: ['MySQL', 'MongoDB'],
+  },
+]
+
+export const ExperienceData = [
+  {
+    id: 1,
+    title: 'SOFTWARE ENGINEER',
+    company: 'Ensolvers',
+    date: 'Marzo 2024 - Presente',
+    description:
+      'Participo en diversos proyectos utilizando la metodología Scrum, con experiencia en tecnologías clave como Java, Spring, React, TypeScript y MySQL.',
   },
 ]
