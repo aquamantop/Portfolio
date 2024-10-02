@@ -212,7 +212,7 @@ export const ExperienceData = [
     id: 1,
     title: 'SOFTWARE ENGINEER',
     company: 'Ensolvers',
-    date: 'Marzo 2024 - Presente',
+    date: 'Febrero 2024 - Presente',
     description:
       'Participo en diversos proyectos utilizando la metodología Scrum, con experiencia en tecnologías clave como Java, Spring, React, TypeScript y MySQL.',
   },
