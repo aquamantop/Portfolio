@@ -1,15 +1,21 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography, IconButton, Link, Box } from '@mui/material'
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Link,
+  Box,
+} from '@mui/material'
 import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedinIcon from '@mui/icons-material/LinkedIn'
-import { LinkFooter, AppBarSX } from "../pages/styles/CustomMui"
+import { LinkFooter, AppBarSX } from '../pages/styles/CustomMui'
 
 const Footer = () => {
   return (
     <AppBar
-    sx={{
-      ...AppBarSX,
-    }}
+      sx={{
+        ...AppBarSX,
+      }}
     >
       <Toolbar
         sx={{
@@ -19,9 +25,9 @@ const Footer = () => {
       >
         <Link
           target="_blank"
-          href="https://drive.google.com/file/d/1J8RURLmzWD4ghNEHeZByauPh0_AB1WrI/view"
+          href="https://drive.google.com/file/d/10RpcrQVbWS6vtvY74e2jStFrG4Nu6UdJ/view?usp=sharing"
           sx={{
-            ... LinkFooter,
+            ...LinkFooter,
           }}
         >
           <Typography>CV PDF</Typography>

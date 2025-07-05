@@ -1,7 +1,5 @@
 import './pages/styles/App.css'
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { createTheme } from '@mui/material/styles'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'

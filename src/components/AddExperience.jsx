@@ -1,4 +1,3 @@
-import React from 'react'
 import { ExperienceData } from '../data/Data'
 import {
   Divider,

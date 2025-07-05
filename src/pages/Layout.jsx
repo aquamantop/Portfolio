@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Header } from '../components/Header'
 import Footer from '../components/Footer'
 import Image from '../assets/perfil.webp'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Divider, List, ListItemIcon, ListItemText } from '@mui/material'
 import { TechData } from '../data/Data'
 import { TextSX } from '../pages/styles/CustomMui'

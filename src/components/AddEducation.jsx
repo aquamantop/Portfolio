@@ -1,4 +1,3 @@
-import React from 'react'
 import { EducationData } from '../data/Data'
 import {
   Divider,

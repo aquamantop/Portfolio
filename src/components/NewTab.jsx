@@ -9,7 +9,7 @@ export default function NavTab() {
   const location = useLocation()
   const [value, setValue] = React.useState(location.pathname)
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (newValue) => {
     setValue(newValue)
   }
 
